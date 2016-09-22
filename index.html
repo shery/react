@@ -13,17 +13,22 @@
     <body>
         <h1 id="module">LET'S START</h1>
         <script type="text/javascript">
-            var Module = (function() {
+            var Module = (function($) {
                 var item = document.getElementById('module');
+                var $item = $('#module');
                 var foo = function() {
                     console.log(item.innerHTML);
                 }
-
+                var app = function() {
+                    console.log($item);
+                }
                 return {
                     foo: foo,
+                    app: app,
                     item: item
                 }
-            })();
+
+            })(jQuery);
         </script>
     </body>
 </html>
