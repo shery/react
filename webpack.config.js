@@ -2,8 +2,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: `${__dirname}/app/index.html`,
-  filename: 'index.html',
+  template: `${__dirname}/index.html`,
+  filename: 'indexbundle.html',
   inject: 'body',
 });
 
