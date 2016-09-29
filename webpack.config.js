@@ -31,5 +31,5 @@ module.exports = {
     inline: true,
     port: 8080,
   },
-  plugins: [HTMLWebpackPluginConfig],
+  // plugins: [HTMLWebpackPluginConfig],
 };

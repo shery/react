@@ -49,11 +49,25 @@
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+	var greeter = __webpack_require__(2);
+	document.getElementById('root').apendChild(greeter());
 	document.write('Here from indesjs!');
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = function () {
+	    var greet = document.createElement('div');
+	    greet.textContent = "Hi there and greetings!";
+	    return greet;
+	};
 
 /***/ }
 /******/ ]);
