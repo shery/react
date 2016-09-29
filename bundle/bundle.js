@@ -54,7 +54,7 @@
 	'use strict';
 
 	var greeter = __webpack_require__(2);
-	document.getElementById('root').apendChild(greeter());
+	document.getElementById('root').appendChild(greeter());
 	document.write('Here from indesjs!');
 
 /***/ },

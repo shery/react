@@ -1,3 +1,3 @@
 const greeter = require('./module.js');
-document.getElementById('root').apendChild(greeter());
+document.getElementById('root').appendChild(greeter());
 document.write('Here from indesjs!')
