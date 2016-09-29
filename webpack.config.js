@@ -8,6 +8,7 @@
 // });
 
 module.exports = {
+  devtool: 'eval-source-map',
   entry: [
     './source/js/index.js',
   ],
@@ -28,6 +29,7 @@ module.exports = {
     ],
   },
   devServer: {
+    colors: true,
     inline: true,
     port: 8080,
   },
