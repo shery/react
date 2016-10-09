@@ -26,12 +26,16 @@ module.exports = {
         //   presets: ['es2015', 'react'],
         // },
       },
+      {
+          test: /\.css$/,
+          loader: 'style!css',
+      },
     ],
   },
   devServer: {
     colors: true,
     inline: true,
-    port: 8080,
+    port: 8008,
   },
   // plugins: [HTMLWebpackPluginConfig],
 };
