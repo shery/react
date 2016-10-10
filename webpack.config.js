@@ -28,10 +28,11 @@ module.exports = {
       },
       {
           test: /\.css$/,
-          loader: 'style!css',
+          loader: 'style!css!postcss-loader',
       },
     ],
   },
+  postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
   devServer: {
     colors: true,
     inline: true,

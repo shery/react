@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/shery15/react#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
@@ -24,6 +25,7 @@
     "babel-preset-react": "^6.11.1",
     "css-loader": "^0.25.0",
     "html-webpack-plugin": "^2.22.0",
+    "postcss-loader": "^0.13.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
