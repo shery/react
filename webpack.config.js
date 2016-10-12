@@ -1,3 +1,7 @@
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+
 // 使用 HtmlWebpackPlugin，将 bundle 好的 <script> 插入到 body。${__dirname} 为 ES6 语法对应的 __dirname
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 //
@@ -9,6 +13,14 @@
 
 module.exports = {
   devtool: 'eval-source-map',
+  resolve: {
+      extensions: [
+          '',
+          '.js',
+          '.json',
+          '.css',
+      ],
+  },
   entry: [
     './source/js/index.js',
   ],
@@ -22,17 +34,21 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        // query: {
-        //   presets: ['es2015', 'react'],
-        // },
       },
       {
           test: /\.css$/,
-          loader: 'style!css!postcss-loader',
+          loader: ExtractTextPlugin.extract(
+              'style-loader',
+              'css-loader!postcss-loader'
+          ),
       },
     ],
   },
-  postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
+  postcss: (webpack) => {
+      return [
+          require('autoprefixer')({ browsers: ['last 2 versions'] }),
+      ]
+  },
   devServer: {
     colors: true,
     inline: true,
