@@ -54,5 +54,7 @@ module.exports = {
     inline: true,
     port: 8008,
   },
-  plugins: [],
+  plugins: [
+      new ExtractTextPlugin('index.css')
+  ],
 };
