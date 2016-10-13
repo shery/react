@@ -50,7 +50,6 @@ module.exports = {
       ]
   },
   devServer: {
-    colors: true,
     inline: true,
     port: 8008,
   },
