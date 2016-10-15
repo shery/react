@@ -54,6 +54,7 @@ module.exports = {
     port: 8008,
   },
   plugins: [
+    //   new webpack.optimize.CommonsChunkPlugin('common.js'),
       new webpack.optimize.UglifyJsPlugin({ minimize: true }),
       new ExtractTextPlugin('index.css')
   ],
