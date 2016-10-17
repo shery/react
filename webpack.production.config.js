@@ -45,7 +45,8 @@ module.exports = {
   },
   postcss: (webpack) => {
       return [
-          require('autoprefixer')({ browsers: ['last 2 versions','ie 6-8'] }),
+          require('autoprefixer')({ browsers: ['> 0.01%'] }),
+          require('cssgrace'),
       ]
   },
   plugins: [

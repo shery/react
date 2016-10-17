@@ -46,8 +46,7 @@ module.exports = {
   },
   postcss: (webpack) => {
       return [
-          require('autoprefixer')({ browsers: ['> 0.01%'] }),
-        //   require('cssgrace'),
+          require('autoprefixer')({ browsers: ['> 5%'] }),
       ]
   },
   devServer: {
@@ -56,7 +55,6 @@ module.exports = {
   },
   plugins: [
     //   new webpack.optimize.CommonsChunkPlugin('common.js'),
-    //   new webpack.optimize.UglifyJsPlugin({ minimize: true }),
       new ExtractTextPlugin('index.css')
   ],
 };
