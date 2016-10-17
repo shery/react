@@ -1,11 +1,15 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -18,9 +22,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
   padding: 0;
 }
 #root {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     color: #fa0;
     opacity: .5;
-    filter: alpha(opacity=50);
 }

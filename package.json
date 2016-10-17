@@ -28,6 +28,7 @@
     "cssgrace": "^3.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
+    "postcss-cssnext": "^2.8.0",
     "postcss-loader": "^0.13.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
