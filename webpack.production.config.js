@@ -45,8 +45,9 @@ module.exports = {
   },
   postcss: (webpack) => {
       return [
-          require('autoprefixer')({ browsers: ['> 0.01%'] }),
+        //   require('autoprefixer')({ browsers: ['> 0.01%'] }),
           require('cssgrace'),
+          require('postcss-cssnext')()
       ]
   },
   plugins: [

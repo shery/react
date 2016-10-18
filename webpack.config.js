@@ -39,14 +39,15 @@ module.exports = {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract(
               'style-loader',
-              'css-loader!postcss-loader'
+              'css-loader!postcss-loader?sourceMap=inline'
           ),
       },
     ],
   },
   postcss: (webpack) => {
       return [
-          require('autoprefixer')({ browsers: ['> 5%'] }),
+        //   require('autoprefixer')({ browsers: ['> 5%'] }),
+          require('postcss-cssnext')()
       ]
   },
   devServer: {

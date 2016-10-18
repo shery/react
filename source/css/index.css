@@ -3,7 +3,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
+/*全局配置*/
 *, *:before, *:after {
   box-sizing: inherit;
 }
