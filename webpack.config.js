@@ -46,7 +46,7 @@ module.exports = {
   },
   postcss: (webpack) => {
       return [
-          require('autoprefixer')({ browsers: ['> 5%'] }),
+        //   require('autoprefixer')({ browsers: ['> 5%'] }),
           require('postcss-cssnext')()
       ]
   },
@@ -55,7 +55,7 @@ module.exports = {
     port: 8008,
   },
   plugins: [
-      new webpack.optimize.CommonsChunkPlugin('common.js'),
+    //   new webpack.optimize.CommonsChunkPlugin('common.js'),
       new ExtractTextPlugin('index.css')
   ],
 };
