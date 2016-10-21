@@ -49,7 +49,11 @@ module.exports = {
           require('postcss-import')({ addDependencyTo: webpack }),
           require('postcss-url')(),
         //   require('autoprefixer')({ browsers: ['> 5%'] }),
-          require('postcss-cssnext')()
+          require('postcss-cssnext')({
+              features: {
+                  autoprefixer: { browsers: ['> 5%'] }
+              }
+          })
       ]
   },
   devServer: {
