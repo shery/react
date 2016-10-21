@@ -45,9 +45,11 @@ module.exports = {
   },
   postcss: (webpack) => {
       return [
+          require('postcss-import')({ addDependencyTo: webpack }),
+          require('postcss-url')(),
         //   require('autoprefixer')({ browsers: ['> 0.01%'] }),
-          require('cssgrace'),
-          require('postcss-cssnext')()
+          require('postcss-cssnext')(),
+          require('cssgrace')
       ]
   },
   plugins: [
