@@ -1,3 +1,6 @@
+:root {
+    --text-color: #ccc;
+}
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
@@ -18,8 +21,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
   padding: 0;
 }
 #root {
-    display: flex;
-    color: #fa0;
-    opacity: .5;
-    border-radius: 5px;
+    & div {
+        display: inline-block;
+        color: var(--text-color);
+        background:#fcfcfc;
+    }
 }
