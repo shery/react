@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Greeter from './module.js';
+import Greeter from './greeter.js';
 
 import '../css/index.css';
 
