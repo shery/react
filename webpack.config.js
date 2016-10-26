@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 // 使用 HtmlWebpackPlugin，将 bundle 好的 <script> 插入到 body。${__dirname} 为 ES6 语法对应的 __dirname
@@ -37,10 +37,7 @@ module.exports = {
       },
       {
           test: /\.css$/,
-          loader: ExtractTextPlugin.extract(
-              'style-loader',
-              'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap'
-          ),
+          loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap',
       },
     ],
   },
@@ -61,6 +58,6 @@ module.exports = {
   },
   plugins: [
     //   new webpack.optimize.CommonsChunkPlugin('common.js'),
-      new ExtractTextPlugin('index.css')
+    //   new ExtractTextPlugin('index.css')
   ],
 };
