@@ -38,8 +38,8 @@ module.exports = {
       {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract(
-              'style-loader',
-              'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader'
+              'style-loader?sourceMap',
+              'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap'
           ),
       },
     ],
