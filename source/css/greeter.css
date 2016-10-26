@@ -12,12 +12,12 @@
     & .inner {
         height: 30px;
         width: 50%;
+        line-height: 30px;
+        text-align: center;
         border-radius: 4px;
         background: var(--background-color);
         & .context {
-            text-align: center;
             color: #fff;
-            line-height: 30px;
         }
     }
 }
