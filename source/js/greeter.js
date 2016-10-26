@@ -6,7 +6,7 @@ class Greeter extends Component {
     render() {
         return (
             <div styleName='outer'>
-                <div styleName='outer'>
+                <div styleName='inner'>
                     <span styleName='context'>Hi there and React greetings!</span>
                 </div>
             </div>
