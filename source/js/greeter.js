@@ -14,4 +14,4 @@ class Greeter extends Component {
     }
 }
 
-export default CSSModules(Greeter, styles);
+export default CSSModules(Greeter, styles, { allowMultiple: true });
