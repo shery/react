@@ -1,6 +1,9 @@
 :root {
     --text-color: #ccc;
     --background-color: green;
+    --danger-theme: {
+        color: #fa0;
+    }
 }
 .outer {
     display: flex;
@@ -17,7 +20,7 @@
         border-radius: 4px;
         background: var(--background-color);
         & .context {
-            color: #fff;
+            @apply --danger-theme
         }
     }
 }
