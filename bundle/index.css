@@ -18,7 +18,9 @@
     background: green
 }
 .source-css-___greeter__outer___3tgqE .source-css-___greeter__inner___TYPj- .source-css-___greeter__context___LcIuU {
-    color: #fa0
+    color: #fa0;
+    font-size: 32px;
+    font-size: 2rem
 }
 html {
   box-sizing: border-box;

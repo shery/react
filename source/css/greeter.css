@@ -1,4 +1,5 @@
 :root {
+    --fontSize: 1rem;
     --text-color: #ccc;
     --background-color: green;
     --danger-theme: {
@@ -20,7 +21,8 @@
         border-radius: 4px;
         background: var(--background-color);
         & .context {
-            @apply --danger-theme
+            @apply --danger-theme;
+            font-size: calc(var(--fontSize)*2);
         }
     }
 }
