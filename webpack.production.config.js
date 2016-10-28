@@ -41,6 +41,10 @@ module.exports = {
               'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
           ),
       },
+      {
+          test : /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
+          loader : 'url-loader?limit=8192'
+      },
     ],
   },
   postcss: (webpack) => {
