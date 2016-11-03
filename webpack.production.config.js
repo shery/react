@@ -2,7 +2,7 @@ const webpack = require('webpack');
 // 定义了一些文件夹的路径
 const path = require('path');
 const ROOT_PATH = path.resolve(__dirname);
-const APP_PATH = path.resolve(ROOT_PATH, 'app');
+const APP_PATH = path.resolve(ROOT_PATH, 'source');
 // const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
