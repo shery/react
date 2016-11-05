@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const ROOT_PATH = path.resolve(__dirname);
 const APP_PATH = path.resolve(ROOT_PATH, 'source');
-// const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
+// const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
