@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/shery15/react#readme",
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
     "babel-core": "^6.17.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
