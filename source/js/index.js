@@ -5,3 +5,4 @@ import Greeter from './greeter.js';
 import '../css/index.css';
 
 render(<Greeter />, document.getElementById('root'));
+render(<List />, document.getElementById('root'));

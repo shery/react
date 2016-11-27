@@ -15,7 +15,7 @@ class Greeter extends Component {
 }
 const list = ['java','javascript','python'];
 
-class LIST extends Component {
+class List extends Component {
     render() {
         return (
             <ul>
@@ -29,3 +29,4 @@ class LIST extends Component {
 }
 
 export default CSSModules(Greeter, styles, { allowMultiple: true });
+export default List
