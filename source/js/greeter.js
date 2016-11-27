@@ -13,5 +13,19 @@ class Greeter extends Component {
         );
     }
 }
+const list = ['java','javascript','python'];
+
+class LIST extends Component {
+    render() {
+        return (
+            <ul>
+                {list.map((result, index) => {
+                    return (<li key={index}>{result}</li>);
+                }
+                )}
+            </ul>
+        );
+    }
+}
 
 export default CSSModules(Greeter, styles, { allowMultiple: true });
