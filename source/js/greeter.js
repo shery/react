@@ -15,7 +15,7 @@ import React, {Component} from 'react';
 // }
 const list = ['java','javascript','python'];
 
-class List extends Component {
+class DemoList extends Component {
     render() {
         return (
             <ul>
@@ -29,4 +29,4 @@ class List extends Component {
 }
 
 // export default CSSModules(Greeter, styles, { allowMultiple: true });
-export default List;
+export default DemoList;
