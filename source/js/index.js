@@ -4,4 +4,4 @@ import Greeter from './greeter.js';
 
 import '../css/index.css';
 
-render(<Greeter />, document.getElementById('root'));
+render(<Greeter name="React" />, document.getElementById('root'));
