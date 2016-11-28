@@ -1,3 +1,27 @@
+.source-css-___greeter__outer___3cx9U {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    height: 200px;
+    width: 100%;
+    background: #ccc
+}
+.source-css-___greeter__outer___3cx9U .source-css-___greeter__inner___8VOGb {
+    height: 30px;
+    width: 50%;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    background: green
+}
+.source-css-___greeter__outer___3cx9U .source-css-___greeter__inner___8VOGb .source-css-___greeter__context___1B3PC {
+    color: #ff6300;
+    font-size: 32px;
+    font-size: 2rem
+}
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;

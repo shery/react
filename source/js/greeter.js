@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-// import CSSModules from 'react-css-modules';
-// import styles from '../css/greeter.css'
+import CSSModules from 'react-css-modules';
+import styles from '../css/greeter.css'
 
 // class Greeter extends Component {
 //     render() {
@@ -27,4 +27,4 @@ class HelloMessage extends React.Component {
 }
 
 // export default CSSModules(Greeter, styles, { allowMultiple: true });
-export default HelloMessage;
+export default CSSModules(HelloMessage, styles, { allowMultiple: true });
