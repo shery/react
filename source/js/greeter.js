@@ -13,20 +13,18 @@ import React, {Component} from 'react';
 //         );
 //     }
 // }
-const list = ['java','javascript','python'];
+const lists = ['JavaScript', 'Java', 'Node', 'Python'];
 
-class DemoList extends Component {
-    render() {
-        return (
-            <ul>
-                {list.map((result, index) => {
-                    return (<li key={index}>{result}</li>);
-                }
-                )}
-            </ul>
-        );
-    }
+class HelloMessage extends React.Component {
+  render() {
+    return (
+    <ul>
+      {lists.map((result, index) => {
+        return (<li key={index}>{result}</li>);
+      })}
+    </ul>);
+  }
 }
 
 // export default CSSModules(Greeter, styles, { allowMultiple: true });
-export default DemoList;
+export default HelloMessage;
