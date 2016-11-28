@@ -17,9 +17,9 @@ class Greeter extends Component {
         );
     }
 }
-Greeter.propTypes = {
-    name: React.ProTypes.string,
-}
+// Greeter.propTypes = {
+//     name: React.ProTypes.string,
+// }
 Greeter.defaultProps = {
     name: 'props'
 }
