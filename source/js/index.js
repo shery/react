@@ -1,9 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Greeter from './greeter.js';
-import TodoApp from './todo.js';
-import MarkdownEditor from './markdowneditor.js';
-import UserGithub from './info.js';
+import Greeter from './Greeter.js';
+import TodoApp from './Todo.js';
+import MarkdownEditor from './MarkdownEditor.js';
+import UserGithub from './Info.js';
 
 
 
