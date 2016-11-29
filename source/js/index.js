@@ -12,4 +12,4 @@ import '../css/index.css';
 render(<Greeter name="React" />, document.getElementById('root'));
 render(<TodoApp />, document.getElementById('todo'));
 render(<MarkdownEditor />, document.getElementById('markdowneditor'));
-render(<UserGithub />, document.getElementById('info'));
+render(<UserGithub source="https://api.github.com/users/torvalds" />, document.getElementById('info'));
