@@ -1,15 +1,15 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Greeter from './Greeter.js';
-import TodoApp from './Todo.js';
-import MarkdownEditor from './MarkdownEditor.js';
-import UserGithub from './Info.js';
+import Greeter from './Greeter.jsx';
+import Todo from './Todo.jsx';
+import MarkdownEditor from './MarkdownEditor.jsx';
+import Info from './Info.jsx';
 
 
 
 import '../css/index.css';
 
 render(<Greeter name="React" />, document.getElementById('root'));
-render(<TodoApp />, document.getElementById('todo'));
+render(<Todo />, document.getElementById('todo'));
 render(<MarkdownEditor />, document.getElementById('markdowneditor'));
-render(<UserGithub source="https://api.github.com/users/shery15" />, document.getElementById('info'));
+render(<Info source="https://api.github.com/users/shery15" />, document.getElementById('info'));

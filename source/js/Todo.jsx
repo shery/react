@@ -9,7 +9,7 @@ const TodoList = (props) => (
         }
     </ul>
 )
-class TodoApp extends Component {
+class Todo extends Component {
     constructor(props) {
         super(props);
         this.onChange = this.onChange.bind(this);
@@ -43,4 +43,4 @@ class TodoApp extends Component {
     }
 }
 
-export default TodoApp;
+export default Todo;
