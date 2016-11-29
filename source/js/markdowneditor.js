@@ -11,10 +11,10 @@ class MarkdownEditor extends Component {
     }
     handleChange() {
         this.setState({value: this.refs.textarea.value});
-        rawMarkup() {
-            const md = new Remarkable();
-            return { __html: md.render(this.state.value) }
-        };
+    }
+    rawMarkup() {
+        const md = new Remarkable();
+        return { __html: md.render(this.state.value) };
     }
 
     render() {
