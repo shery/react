@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 // 定义了一些文件夹的路径
-const path = require('path');
-const ROOT_PATH = path.resolve(__dirname);
-const APP_PATH = path.resolve(ROOT_PATH, 'source');
+// const path = require('path');
+// const ROOT_PATH = path.resolve(__dirname);
+// const APP_PATH = path.resolve(ROOT_PATH, 'source');
 // const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -19,12 +19,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   resolve: {
-      extensions: [
-          '',
-          '.js',
-          '.json',
-          '.css',
-      ],
+    extensions: [
+      '',
+      '.js',
+      '.json',
+      '.css',
+    ],
   },
   entry: [
     './source/js/index.js',
@@ -41,34 +41,34 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-          test: /\.css$/,
-          loader: ExtractTextPlugin.extract(
-              'style-loader',
-              'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
-          ),
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
+        ),
       },
       {
-          test : /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
-          loader : 'url-loader?limit=8192'
+        test: /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
+        loader: 'url-loader?limit=8192',
       },
     ],
   },
   postcss: (webpack) => {
-      return [
-          require('postcss-import')({ addDependencyTo: webpack }),
-          require('postcss-url')(),
-          require('postcss-cssnext')({
-              features: {
-                  autoprefixer: { browsers: ['> 0.01%'] }
-              }
-          }),
-          require('cssgrace')
-      ]
+    return [
+      require('postcss-import')({ addDependencyTo: webpack }),
+      require('postcss-url')(),
+      require('postcss-cssnext')({
+        features: {
+          autoprefixer: { browsers: ['> 0.01%'] },
+        },
+      }),
+      require('cssgrace'),
+    ];
   },
   plugins: [
-      new webpack.optimize.UglifyJsPlugin({ minimize: true }),
-      new ExtractTextPlugin('index.css',{
-          allChunks: true
-      })
+    new webpack.optimize.UglifyJsPlugin({ minimize: true }),
+    new ExtractTextPlugin('index.css', {
+      allChunks: true,
+    }),
   ],
 };

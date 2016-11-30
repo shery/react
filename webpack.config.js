@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 // 定义了一些文件夹的路径
-const path = require('path');
+// const path = require('path');
 // const ROOT_PATH = path.resolve(__dirname);
 // const APP_PATH = path.resolve(ROOT_PATH, 'source');
 // const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
@@ -20,12 +20,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devtool: 'eval-source-map',
   resolve: {
-      extensions: [
-          '',
-          '.js',
-          '.json',
-          '.css',
-      ],
+    extensions: [
+      '',
+      '.js',
+      '.json',
+      '.css',
+    ],
   },
   entry: [
     './source/js/index.js',
@@ -42,28 +42,28 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-          test: /\.css$/,
-          loader: ExtractTextPlugin.extract(
-              'style-loader?sourceMap',
-              'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap'
-          ),
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader?sourceMap',
+          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap',
+        ),
       },
       {
-          test : /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
-          loader : 'url-loader?limit=8192'
+        test: /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
+        loader: 'url-loader?limit=8192',
       },
     ],
   },
   postcss: (webpack) => {
-      return [
-          require('postcss-import')({ addDependencyTo: webpack }),
-          require('postcss-url')(),
-          require('postcss-cssnext')({
-              features: {
-                  autoprefixer: { browsers: ['> 5%'] }
-              }
-          })
-      ]
+    return [
+      require('postcss-import')({ addDependencyTo: webpack }),
+      require('postcss-url')(),
+      require('postcss-cssnext')({
+        features: {
+          autoprefixer: { browsers: ['> 5%'] },
+        },
+      }),
+    ];
   },
   devServer: {
     inline: true,
@@ -71,6 +71,6 @@ module.exports = {
   },
   plugins: [
     //   new webpack.optimize.CommonsChunkPlugin('common.js'),
-      new ExtractTextPlugin('index.css')
+    new ExtractTextPlugin('index.css'),
   ],
 };

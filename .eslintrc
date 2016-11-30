@@ -1,17 +1,18 @@
 {
-    "extends": "airbnb",
-    "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "linebreak-style": "off",
-        "import/no-unresolved": "off",
-        "import/extensions": "off",
-    },
-    "env": {
-        "browser": true,
-    },
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ],
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "linebreak-style": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": ["warn", {"devDependencies": false}],
+  },
+  "env": {
+    "browser": true,
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
 }
