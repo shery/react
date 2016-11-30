@@ -3,6 +3,8 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "linebreak-style": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
     },
     "env": {
         "browser": true,
@@ -11,5 +13,5 @@
         "react",
         "jsx-a11y",
         "import"
-    ]
+    ],
 }
