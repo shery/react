@@ -5,8 +5,6 @@ import Todo from './Todo.jsx';
 import MarkdownEditor from './MarkdownEditor.jsx';
 import Info from './Info.jsx';
 
-
-
 import '../css/index.css';
 
 render(<Greeter name="React" />, document.getElementById('root'));
