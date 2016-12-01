@@ -21,7 +21,6 @@ class MarkdownEditor extends Component {
     return (
       <div className="MarkdownEditor">
         <h3>Input</h3>
-        console.log(ok);
         <textarea
           onChange={this.handleChange}
           ref={(c) => { this.textarea = c; }}
@@ -29,7 +28,7 @@ class MarkdownEditor extends Component {
         />
         <h3>Output</h3>
         {/* <div className="content" dangerouslySetInnerHTML={this.rawMarkup()} /> */}
-        {/* <div className="content">{this.rawMarkup()}</div> */}
+        <div className="content">{this.rawMarkup()}</div>
       </div>
     );
   }
