@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-const TodoList = (props) => (
+const TodoList = props => (
   <ul>
     {
-      props.items.map((item) => (
+      props.items.map(item => (
         <li key={item.id}>{item.text}</li>
       ))
     }

@@ -32,5 +32,8 @@ class Info extends Component {
     );
   }
 }
+Info.propTypes = {
+  source: React.PropTypes.string,
+};
 
 export default Info;

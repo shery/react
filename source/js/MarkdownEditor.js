@@ -10,7 +10,7 @@ class MarkdownEditor extends Component {
     };
   }
   handleChange() {
-    this.setState({ value: this.refs.textarea.value });
+    this.setState({ value: this.textarea.value });
   }
   rawMarkup() {
     const md = new Remarkable();
@@ -21,9 +21,14 @@ class MarkdownEditor extends Component {
     return (
       <div className="MarkdownEditor">
         <h3>Input</h3>
-        <textarea onChange={this.handleChange} ref="textarea" defaultValue={this.state.value} />
+        <textarea
+          onChange={this.handleChange}
+          ref={(c) => { this.textarea = c; }}
+          defaultValue={this.state.value}
+        />
         <h3>Output</h3>
-        <div className="content" dangerouslySetInnerHTML={this.rawMarkup()} />
+        {/* <div className="content" dangerouslySetInnerHTML={this.rawMarkup()} /> */}
+        <div className="content">{this.rawMarkup()}</div>
       </div>
     );
   }
