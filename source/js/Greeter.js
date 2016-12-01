@@ -7,7 +7,7 @@ class Greeter extends Component {
     super(props);
     this.tick = this.tick.bind(this);
     this.state = {
-      secondsElapsed: 0,
+      secondsElapsed: 0
     };
   }
   componentDidMount() {
@@ -30,10 +30,10 @@ class Greeter extends Component {
   }
 }
 Greeter.propTypes = {
-  name: React.PropTypes.string,
+  name: React.PropTypes.string
 };
 Greeter.defaultProps = {
-  name: 'props',
+  name: 'props'
 };
 
 export default CSSModules(Greeter, styles, { allowMultiple: true });

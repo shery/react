@@ -23,35 +23,35 @@ module.exports = {
       '',
       '.js',
       '.json',
-      '.css',
-    ],
+      '.css'
+    ]
   },
   entry: [
-    './source/js/index.js',
+    './source/js/index.js'
   ],
   output: {
     path: `${__dirname}/bundle/`,
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
           'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
-        ),
+        )
       },
       {
         test: /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
-        loader: 'url-loader?limit=8192',
-      },
-    ],
+        loader: 'url-loader?limit=8192'
+      }
+    ]
   },
   postcss: (webpack) => {
     return [
@@ -59,16 +59,16 @@ module.exports = {
       require('postcss-url')(),
       require('postcss-cssnext')({
         features: {
-          autoprefixer: { browsers: ['> 0.01%'] },
-        },
+          autoprefixer: { browsers: ['> 0.01%'] }
+        }
       }),
-      require('cssgrace'),
+      require('cssgrace')
     ];
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
     new ExtractTextPlugin('index.css', {
-      allChunks: true,
-    }),
-  ],
+      allChunks: true
+    })
+  ]
 };

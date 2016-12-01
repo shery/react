@@ -6,7 +6,7 @@ class Info extends Component {
     this.state = {
       username: '',
       githubUrl: '',
-      avatarUrl: '',
+      avatarUrl: ''
     };
   }
   componentDidMount() {
@@ -17,7 +17,7 @@ class Info extends Component {
         this.setState({
           username: data.name,
           githubUrl: data.html_url,
-          avatarUrl: data.avatar_url,
+          avatarUrl: data.avatar_url
         });
       }
     });
@@ -33,7 +33,7 @@ class Info extends Component {
   }
 }
 Info.propTypes = {
-  source: React.PropTypes.string,
+  source: React.PropTypes.string
 };
 
 export default Info;

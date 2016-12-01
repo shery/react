@@ -6,7 +6,7 @@ class MarkdownEditor extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      value: 'Type some *markdown* here!',
+      value: 'Type some *markdown* here!'
     };
   }
   handleChange() {

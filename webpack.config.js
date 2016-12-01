@@ -24,35 +24,35 @@ module.exports = {
       '',
       '.js',
       '.json',
-      '.css',
-    ],
+      '.css'
+    ]
   },
   entry: [
-    './source/js/index.js',
+    './source/js/index.js'
   ],
   output: {
     path: `${__dirname}/bundle/`,
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
           'style-loader?sourceMap',
-          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap',
-        ),
+          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap'
+        )
       },
       {
         test: /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
-        loader: 'url-loader?limit=8192',
-      },
-    ],
+        loader: 'url-loader?limit=8192'
+      }
+    ]
   },
   postcss: (webpack) => {
     return [
@@ -60,17 +60,17 @@ module.exports = {
       require('postcss-url')(),
       require('postcss-cssnext')({
         features: {
-          autoprefixer: { browsers: ['> 5%'] },
-        },
-      }),
+          autoprefixer: { browsers: ['> 5%'] }
+        }
+      })
     ];
   },
   devServer: {
     inline: true,
-    port: 8008,
+    port: 8008
   },
   plugins: [
     //   new webpack.optimize.CommonsChunkPlugin('common.js'),
-    new ExtractTextPlugin('index.css'),
-  ],
+    new ExtractTextPlugin('index.css')
+  ]
 };

@@ -16,7 +16,7 @@ class Todo extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       items: [],
-      text: '',
+      text: ''
     };
   }
   onChange(e) {
