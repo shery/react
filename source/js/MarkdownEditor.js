@@ -14,7 +14,7 @@ class MarkdownEditor extends Component {
   }
   rawMarkup() {
     const md = new Remarkable();
-    return { __html: md.render(this.state.value) };
+    return md.render(this.state.value);
   }
 
   render() {
