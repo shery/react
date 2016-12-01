@@ -27,8 +27,7 @@ class MarkdownEditor extends Component {
           defaultValue={this.state.value}
         />
         <h3>Output</h3>
-        {/* <div className="content" dangerouslySetInnerHTML={this.rawMarkup()} /> */}
-        <div className="content">{this.rawMarkup()}</div>
+        <div className="content" dangerouslySetInnerHTML={this.rawMarkup()} />
       </div>
     );
   }
