@@ -14,7 +14,7 @@ class MarkdownEditor extends Component {
   }
   rawMarkup() {
     const md = new Remarkable();
-    return md.render(this.state.value);
+    return { __html: md.render(this.state.value) };
   }
 
   render() {
@@ -27,7 +27,6 @@ class MarkdownEditor extends Component {
           defaultValue={this.state.value}
         />
         <h3>Output</h3>
-        {/* <div className="content" dangerouslySetInnerHTML={this.rawMarkup()} /> */}
         <div className="content">{this.rawMarkup()}</div>
       </div>
     );
