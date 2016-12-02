@@ -25,7 +25,7 @@ module.exports = {
     ]
   },
   entry: [
-    './source/js/index.js'
+    './source/index.js'
   ],
   output: {
     path: `${__dirname}/bundle/`,

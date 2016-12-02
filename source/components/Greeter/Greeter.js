@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
-import styles from '../css/greeter.css';
+import styles from './greeter.css';
 
 class Greeter extends Component {
   constructor(props) {
