@@ -6,15 +6,12 @@ const webpack = require('webpack');
 // const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-
-// 使用 HtmlWebpackPlugin，将 bundle 好的 <script> 插入到 body。${__dirname} 为 ES6 语法对应的 __dirname
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
-//
+
 // const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 //   template: `${__dirname}/index.html`,
 //   filename: 'indexbundle.html',
-//   inject: 'body',
+//   inject: 'body'
 // });
 
 module.exports = {
@@ -70,6 +67,7 @@ module.exports = {
     port: 8008
   },
   plugins: [
+    // HTMLWebpackPluginConfig,
     //   new webpack.optimize.CommonsChunkPlugin('common.js'),
     new ExtractTextPlugin('index.css')
   ]
