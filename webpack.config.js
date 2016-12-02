@@ -51,7 +51,7 @@ module.exports = {
       }
     ]
   },
-  postcss: (webpack) => {
+  postcss: () => {
     return [
       require('postcss-import')({ addDependencyTo: webpack }),
       require('postcss-url')(),
