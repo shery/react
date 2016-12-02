@@ -1,4 +1,4 @@
-.source-css-___greeter__outer___3cx9U {
+.source-components-Greeter-___greeter__outer___2mDOy {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
@@ -9,7 +9,7 @@
     width: 100%;
     background: #ccc
 }
-.source-css-___greeter__outer___3cx9U .source-css-___greeter__inner___8VOGb {
+.source-components-Greeter-___greeter__outer___2mDOy .source-components-Greeter-___greeter__inner___8iK4P {
     height: 30px;
     width: 50%;
     line-height: 30px;
@@ -17,7 +17,7 @@
     border-radius: 4px;
     background: green
 }
-.source-css-___greeter__outer___3cx9U .source-css-___greeter__inner___8VOGb .source-css-___greeter__context___1B3PC {
+.source-components-Greeter-___greeter__outer___2mDOy .source-components-Greeter-___greeter__inner___8iK4P .source-components-Greeter-___greeter__context___1Cx_K {
     color: #ff6300;
     font-size: 32px;
     font-size: 2rem

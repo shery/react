@@ -5,7 +5,7 @@ import Todo from './components/Todo';
 import MarkdownEditor from './components/MarkdownEditor';
 import Info from './components/Info';
 
-import '../css/index.css';
+import './css/index.css';
 
 render(<Greeter name="React" />, document.getElementById('root'));
 render(<Todo />, document.getElementById('todo'));

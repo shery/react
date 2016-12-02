@@ -8,6 +8,7 @@
     "import/no-extraneous-dependencies": ["warn", {"devDependencies": false}],
     "no-undef": "off",
     "comma-dangle": ["error", "never"],
+    "arrow-body-style": ["error", "as-needed"],
   },
   "env": {
     "browser": true,
