@@ -18,4 +18,4 @@ render(
       <Route path="/markdowneditor" component={MarkdownEditor} />
     </Route>
   </Router>,
-  document.getElementById('app'));
+  document.getElementById('root'));
