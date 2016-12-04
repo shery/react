@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import App from './components/App';
 import Greeter from './components/Greeter';
 import Todo from './components/Todo';
@@ -10,7 +10,7 @@ import Info from './components/Info';
 import './css/index.css';
 
 render(
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Greeter} />
       <Route path="/todo" component={Todo} />

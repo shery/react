@@ -9,7 +9,7 @@ class Info extends Component {
       avatarUrl: ''
     };
   }
-  componentWillMount() {
+  componentDidMount() {
     $.get(this.props.source, (result) => {
       console.log(result);
       const data = result;
