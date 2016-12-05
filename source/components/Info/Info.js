@@ -11,7 +11,6 @@ class Info extends Component {
   }
   componentDidMount() {
     $.get(this.props.source, (result) => {
-      console.log(result);
       const data = result;
       if (data) {
         this.setState({
