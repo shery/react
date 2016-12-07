@@ -9,6 +9,7 @@ const App = (props) => (
       <li><Link to="/info" activeStyle={{ color: 'green' }}>Info</Link></li>
       <li><Link to="/todo" activeStyle={{ color: 'green' }}>Todo</Link></li>
       <li><Link to="/markdowneditor" activeStyle={{ color: 'green' }}>MarkdownEditor</Link></li>
+      <li><Link to="/font" activeStyle={{ color: 'green' }}>Font</Link></li>
     </ul>
     {props.children}
   </div>
