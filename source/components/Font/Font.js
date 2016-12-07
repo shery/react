@@ -4,7 +4,7 @@ const FontList = props => (
   <select>
     {
       props.fontFaces.map(item => (
-        <option key={item.id}>{item.fontFace}</option>
+        <option key={item.id}>{item.name}</option>
       ))
     }
   </select>
@@ -14,7 +14,7 @@ class Font extends Component {
     super(props);
     // this.tick = this.tick.bind(this);
     this.state = {
-      fontFaces: ['楷书', '隶书', '行书'],
+      fontFaces: [{ name: '楷书', id: 0 }, { name: '隶书', id: 2 }, { name: '行书', id: 2 }],
       secondsElapsed: 0
     };
   }
@@ -30,16 +30,10 @@ class Font extends Component {
   render() {
     return (
       <div>
-        <FontList items={this.state.fontFace} />
+        <FontList fontFaces={this.state.fontFaces} />
       </div>
     );
   }
 }
-// Font.propTypes = {
-//   name: React.PropTypes.string
-// };
-// Font.defaultProps = {
-//   name: 'props'
-// };
 
 export default Font;
