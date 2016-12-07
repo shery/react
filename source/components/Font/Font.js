@@ -14,7 +14,7 @@ class Font extends Component {
     super(props);
     // this.tick = this.tick.bind(this);
     this.state = {
-      fontFaces: [{ name: '楷书', id: 0 }, { name: '隶书', id: 2 }, { name: '行书', id: 2 }],
+      fontFaces: [{ name: '楷书', id: 0 }, { name: '隶书', id: 1 }, { name: '行书', id: 2 }],
       secondsElapsed: 0
     };
   }
