@@ -7,9 +7,12 @@ class Canvas extends Component {
   }
   componentDidMount() {
     const c = document.getElementById('myCanvas');
+    c.width = '200px';
+    c.height = '400px';
+    c.style = 'border:1px solid #000000;';
     const ctx = c.getContext('2d');
-    ctx.fillStyle = '#FF0000';
-    ctx.fillRect(0, 0, 150, 75);
+    ctx.font = '30px 楷书';
+    ctx.fillText('长歌行', 10, 50);
   }
   render() {
     return (
