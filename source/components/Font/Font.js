@@ -7,8 +7,8 @@ class Canvas extends Component {
   }
   componentDidMount() {
     const c = document.getElementById('myCanvas');
-    c.width = '200px';
-    c.height = '400px';
+    c.width = '200';
+    c.height = '400';
     c.style = 'border:1px solid #000000;';
     const ctx = c.getContext('2d');
     ctx.font = '30px 楷书';
