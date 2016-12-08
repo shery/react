@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
 
-const Canvas = props => (
-  <canvas width="500px;" height="500px" />
-);
+class Canvas extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  componentDidMount() {
+    const c = document.getElementById('myCanvas');
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#FF0000';
+    ctx.fillRect(0, 0, 150, 75);
+  }
+  render() {
+    return (
+      <canvas id="myCanvas" />
+    );
+  }
+}
 const FontList = props => (
   <select>
     {
