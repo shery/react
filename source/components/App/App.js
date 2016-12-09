@@ -3,7 +3,7 @@ import { Link, IndexLink } from 'react-router';
 
 const App = (props) => (
   <div>
-    <h1>React Router Test</h1>
+    <h1 className="web-font">中文字体测试</h1>
     <ul>
       <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
       <li><Link to="/info" activeStyle={{ color: 'green' }}>Info</Link></li>
