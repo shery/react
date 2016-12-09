@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import CSSModules from 'react-css-modules';
-import styles from './font.css';
-
 
 class Canvas extends Component {
   constructor(props) {
@@ -66,4 +63,4 @@ class Font extends Component {
   }
 }
 
-export default CSSModules(Font, styles, { allowMultiple: true });
+export default Font;

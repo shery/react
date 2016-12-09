@@ -22,4 +22,27 @@
     font-size: 32px;
     font-size: 2rem
 }
-
+@font-face {font-family: 'webfont';
+  src: url('//at.alicdn.com/t/0ih98kwn4yj5rk9.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/0ih98kwn4yj5rk9.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/0ih98kwn4yj5rk9.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/0ih98kwn4yj5rk9.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/0ih98kwn4yj5rk9.svg#NotoSansHans-DemiLight') format('svg'); /* iOS 4.1- */
+}
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+/*全局配置*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
