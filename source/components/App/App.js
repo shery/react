@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
+import './app.css';
 
 const App = (props) => (
   <div>

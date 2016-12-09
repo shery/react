@@ -1,3 +1,10 @@
+.source-components-App-___app__web-font___Pv--z {
+    font-family:"webfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
 .source-components-Greeter-___greeter__outer___2mDOy {
     display: -webkit-box;
     display: flex;
@@ -28,13 +35,6 @@
   url('//at.alicdn.com/t/etvkg3egxf20529.woff') format('woff'), /* chrome、firefox */
   url('//at.alicdn.com/t/etvkg3egxf20529.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url('//at.alicdn.com/t/etvkg3egxf20529.svg#NotoSansHans-Black') format('svg'); /* iOS 4.1- */
-}
-.source-css-___index__web-font___2qE_g {
-    font-family:"webfont" !important;
-    font-size:16px;font-style:normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
 }
 html {
   box-sizing: border-box;
