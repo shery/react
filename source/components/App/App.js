@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 import CSSModules from 'react-css-modules';
-import './app.css';
+import styles from './app.css';
 
 const App = (props) => (
   <div>
