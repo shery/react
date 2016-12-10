@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 
-class Canvas extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  componentDidMount() {
-    const c = document.getElementById('myCanvas');
-    c.width = '200';
-    c.height = '400';
-    c.style = 'border:1px solid #000000;';
-    const ctx = c.getContext('2d');
-    ctx.font = '30px KaiTi';
-    ctx.fillText('长歌行', 10, 50);
-  }
-  render() {
-    return (
-      <canvas id="myCanvas" />
-    );
-  }
-}
+// class Canvas extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {};
+//   }
+//   componentDidMount() {
+//     const oCanvas = document.createElement('canvas');
+//     oCanvas.width = '200';
+//     oCanvas.height = '400';
+//     oCanvas.style = 'border:1px solid #000000;';
+//     const oCtx = oCanvas.getContext('2d');
+//     oCtx.font = '30px KaiTi';
+//     oCtx.fillText('长歌行', 10, 50);
+//     document.body.appendChild(oCanvas);
+//   }
+//   render() {
+//     return (
+//       <canvas id="myCanvas" />
+//     );
+//   }
+// }
 const FontList = props => (
   <select>
     {
@@ -38,15 +39,16 @@ class Font extends Component {
       secondsElapsed: 0
     };
   }
-  // componentWillMount() {
-  //   let canvas=document.getElementById('myCanvas');
-  //   let ctx=canvas.getContext('2d');
-  //   ctx.fillStyle='#FF0000';
-  //   ctx.fillRect(0,0,80,100);
-  // }
-  // componentDidMount() {
-  //   this.interval = setInterval(this.tick, 1000);
-  // }
+  componentDidMount() {
+    const oCanvas = document.createElement('canvas');
+    oCanvas.width = '200';
+    oCanvas.height = '400';
+    oCanvas.style = 'border:1px solid #000000;';
+    const oCtx = oCanvas.getContext('2d');
+    oCtx.font = '30px KaiTi';
+    oCtx.fillText('长歌行', 10, 50);
+    document.body.appendChild(oCanvas);
+  }
   // componentWillUnmount() {
   //   clearInterval(this.interval);
   // }
@@ -57,7 +59,6 @@ class Font extends Component {
     return (
       <div>
         <FontList fontFaces={this.state.fontFaces} />
-        <Canvas />
       </div>
     );
   }
