@@ -11,8 +11,8 @@ class Canvas extends Component {
     c.height = '400';
     c.style = 'border:1px solid #000000;';
     const ctx = c.getContext('2d');
-    ctx.font = '30px LiSu';
-    ctx.fillText('长歌行，啊实打实的', 10, 50);
+    ctx.font = '30px AMCSongGBK-Light';
+    ctx.fillText('长歌行', 10, 50);
   }
   render() {
     return (
