@@ -30,13 +30,13 @@
     font-size: 2rem
 }
 @font-face {font-family: 'LiSu';
-  src: url('http://www.shery.me/react/#/font/LiSu.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url('https://github.com/shery15/react/tree/master/source/font/LiSu.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 }
 @font-face {font-family: 'KaiTi';
-  src: url('http://www.shery.me/react/#/font/KaiTi.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url('https://github.com/shery15/react/tree/master/source/font/KaiTi.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 }
 @font-face {font-family: 'AMCSongGBK-Light';
-  src: url('http://www.shery.me/react/#/font/AMCSongGBK-Light.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url('https://github.com/shery15/react/tree/master/source/font/AMCSongGBK-Light.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 }
 html {
   box-sizing: border-box;
