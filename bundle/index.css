@@ -1,10 +1,10 @@
-.source-components-App-___app__AMCSongGBK-Light___uUSbB {
+/*.AMCSongGBK-Light {
     font-family:"AMCSongGBK-Light" !important;
     font-style:normal;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
-}
+}*/
 .source-components-Greeter-___greeter__outer___2mDOy {
     display: -webkit-box;
     display: flex;
@@ -29,15 +29,15 @@
     font-size: 32px;
     font-size: 2rem
 }
-@font-face {font-family: 'LiSu';
-  src: url('/../react/source/fonts/LiSu.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+/*@font-face {font-family: 'LiSu';
+  src: url('/../react/source/fonts/LiSu.ttf') format('truetype');
 }
 @font-face {font-family: 'KaiTi';
-  src: url('/../react/source/fonts/KaiTi.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url('/../react/source/fonts/KaiTi.ttf') format('truetype');
 }
 @font-face {font-family: 'AMCSongGBK-Light';
-  src: url('/../react/source/fonts/AMCSongGBK-Light.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-}
+  src: url('/../react/source/fonts/AMCSongGBK-Light.ttf') format('truetype');
+}*/
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;

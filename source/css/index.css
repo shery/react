@@ -1,12 +1,12 @@
-@font-face {font-family: 'LiSu';
-  src: url('/../react/source/fonts/LiSu.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+/*@font-face {font-family: 'LiSu';
+  src: url('/../react/source/fonts/LiSu.ttf') format('truetype');
 }
 @font-face {font-family: 'KaiTi';
-  src: url('/../react/source/fonts/KaiTi.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url('/../react/source/fonts/KaiTi.ttf') format('truetype');
 }
 @font-face {font-family: 'AMCSongGBK-Light';
-  src: url('/../react/source/fonts/AMCSongGBK-Light.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-}
+  src: url('/../react/source/fonts/AMCSongGBK-Light.ttf') format('truetype');
+}*/
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
