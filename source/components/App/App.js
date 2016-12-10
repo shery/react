@@ -5,7 +5,7 @@ import styles from './app.css';
 
 const App = (props) => (
   <div>
-    <h1 styleName="web-font">中文字体测试</h1>
+    <h1 styleName="AMCSongGBK-Light">中文字体测试</h1>
     <ul>
       <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
       <li><Link to="/info" activeStyle={{ color: 'green' }}>Info</Link></li>
