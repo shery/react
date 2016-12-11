@@ -46,7 +46,8 @@ class Font extends Component {
     oCanvas.style = 'border:1px solid #000000;';
     const oCtx = oCanvas.getContext('2d');
     oCtx.font = '30px KaiTi';
-    oCtx.fillText('长歌行长歌行长歌行', 10, 50, 180);
+    const textLength = oCtx.measureText('你好啊你好，');
+    oCtx.fillText('长歌行长歌行长歌行', 10, 50, textLength);
     document.body.appendChild(oCanvas);
   }
   // componentWillUnmount() {
