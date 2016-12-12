@@ -52,7 +52,7 @@ class Font extends Component {
       const textLength = oCtx.measureText('你好啊你好，');
       oCtx.fillText('长歌行长歌行长歌行', 10, 50, textLength.width);
     };
-    img.src = 'images/backdrop.png';
+    img.src = 'https://cdn.pixabay.com/photo/2016/10/06/14/07/sunflowers-1719119_960_720.jpg';
     document.body.appendChild(oCanvas);
   }
   // componentWillUnmount() {
