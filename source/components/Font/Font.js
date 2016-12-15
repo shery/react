@@ -51,9 +51,9 @@ class Font extends Component {
       oCtx.font = '16px KaiTi';
       oCtx.direction = 'rtl';
       oCtx.textAlign = 'center';
-      const textLength = oCtx.measureText('花开堪折直须折');
-      oCtx.fillText('花开堪折直须折', (200 - textLength) / 2, 192);
-      oCtx.fillText('莫待无花空折枝', (200 - textLength) / 2, 208);
+      // const textLength = oCtx.measureText('花开堪折直须折');
+      oCtx.fillText('花开堪折直须折', 20, 192);
+      oCtx.fillText('莫待无花空折枝', 20, 208);
     };
     img.src = 'http://pic.qiantucdn.com/58pic/18/09/24/158PICn58PICHEa_1024.jpg';
     document.body.appendChild(oCanvas);
