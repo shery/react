@@ -50,10 +50,11 @@ class Font extends Component {
       oCtx.drawImage(img, 0, 0);
       oCtx.font = '30px KaiTi';
       oCtx.direction = 'rtl';
+      oCtx.textAlign = 'center';
       const textLength = oCtx.measureText('你好啊你好，');
       oCtx.fillText('长歌行长歌行长歌行', 10, 50, textLength.width);
     };
-    img.src = 'http://i1.piimg.com/567571/c66f0f72545d92ed.jpg';
+    img.src = 'http://pic.qiantucdn.com/58pic/18/09/24/158PICn58PICHEa_1024.jpg';
     document.body.appendChild(oCanvas);
   }
   // componentWillUnmount() {
