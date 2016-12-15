@@ -49,7 +49,7 @@ class Font extends Component {
     img.onload = () => {
       oCtx.drawImage(img, 0, 0);
       oCtx.font = '30px KaiTi';
-      oCtx.direction = 'ltr';
+      oCtx.direction = 'rtl';
       const textLength = oCtx.measureText('你好啊你好，');
       oCtx.fillText('长歌行长歌行长歌行', 10, 50, textLength.width);
     };
