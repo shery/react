@@ -52,7 +52,7 @@ class Font extends Component {
       const textLength = oCtx.measureText('你好啊你好，');
       oCtx.fillText('长歌行长歌行长歌行', 10, 50, textLength.width);
     };
-    img.src = 'https://d13yacurqjgara.cloudfront.net/users/6084/screenshots/3152231/lighthouse.png';
+    img.src = 'http://i1.piimg.com/567571/c66f0f72545d92ed.jpg';
     document.body.appendChild(oCanvas);
   }
   // componentWillUnmount() {
