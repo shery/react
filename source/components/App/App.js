@@ -4,7 +4,7 @@ import CSSModules from 'react-css-modules';
 import styles from '../../css/bulma.css';
 
 const App = (props) => (
-  <div styleName="tabs">
+  <div className="tabs">
     <ul>
       <li><IndexLink to="/">Home</IndexLink></li>
       <li><Link to="/info">Info</Link></li>
