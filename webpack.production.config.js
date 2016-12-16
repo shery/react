@@ -23,7 +23,8 @@ module.exports = {
       '',
       '.js',
       '.json',
-      '.css'
+      '.css',
+      '.sass'
     ]
   },
   entry: [

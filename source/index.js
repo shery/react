@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import 'normalize.css';
+// import 'normalize.css';
+import 'bulma';
 import App from './components/App';
 import Greeter from './components/Greeter';
 import Todo from './components/Todo';
