@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 import CSSModules from 'react-css-modules';
-import styles from 'bulma';
-
+import styles from '../../css/bulma.css';
 
 const App = (props) => (
   <div styleName="tabs">
