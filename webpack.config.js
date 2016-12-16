@@ -47,6 +47,10 @@ module.exports = {
         )
       },
       {
+        test: /\.sass$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         test: /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
         loader: 'url-loader?limit=8192'
       }
