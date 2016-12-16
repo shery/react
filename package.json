@@ -4,7 +4,7 @@
   "description": "reactdemo",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base . --hot --inline",
     "build": "webpack --progress --profile --colors --config webpack.production.config.js"
   },
   "repository": {
