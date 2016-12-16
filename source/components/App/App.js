@@ -6,11 +6,11 @@ import styles from '../../css/bulma.css';
 const App = (props) => (
   <div styleName="tabs">
     <ul>
-      <li><IndexLink to="/" activeClassName="is-active">Home</IndexLink></li>
-      <li><Link to="/info" activeStyle="is-active">Info</Link></li>
-      <li><Link to="/todo" activeStyle="is-active">Todo</Link></li>
-      <li><Link to="/markdowneditor" activeStyle="is-active">MarkdownEditor</Link></li>
-      <li><Link to="/font" activeStyle="is-active">Font</Link></li>
+      <li><IndexLink to="/">Home</IndexLink></li>
+      <li><Link to="/info">Info</Link></li>
+      <li><Link to="/todo">Todo</Link></li>
+      <li><Link to="/markdowneditor">MarkdownEditor</Link></li>
+      <li><Link to="/font">Font</Link></li>
     </ul>
     {props.children}
   </div>
