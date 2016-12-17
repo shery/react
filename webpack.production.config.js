@@ -44,7 +44,7 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
         )
       },
       {
@@ -66,6 +66,7 @@ module.exports = {
     ];
   },
   plugins: [
+    new webpack.BannerPlugin('Copyright 2016 by shery'),
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
     new ExtractTextPlugin('index.css', {
       allChunks: true
