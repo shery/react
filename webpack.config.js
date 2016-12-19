@@ -6,13 +6,13 @@ const webpack = require('webpack');
 // const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-//   template: `${__dirname}/index.html`,
-//   filename: 'indexbundle.html',
-//   inject: 'body'
-// });
+const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: `${__dirname}/index.html`,
+  filename: 'indexbundle.html',
+  inject: 'body'
+});
 
 module.exports = {
   devtool: 'eval-source-map',
