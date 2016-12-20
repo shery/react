@@ -67,6 +67,8 @@ module.exports = {
     port: 8008
   },
   plugins: [
+    // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
+    new webpack.optimize.OccurenceOrderPlugin(),
     // HTMLWebpackPluginConfig,
     //   new webpack.optimize.CommonsChunkPlugin('common.js'),
     new ExtractTextPlugin('index.css')
