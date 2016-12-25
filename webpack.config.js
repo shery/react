@@ -8,11 +8,11 @@ const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: `${__dirname}/index.html`,
-  filename: 'indexbundle.html',
-  inject: 'body'
-});
+// const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+//   template: `${__dirname}/index.html`,
+//   filename: 'indexbundle.html',
+//   inject: 'body'
+// });
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -69,7 +69,7 @@ module.exports = {
   plugins: [
     // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
     new webpack.optimize.OccurenceOrderPlugin(),
-    HTMLWebpackPluginConfig,
+    // HTMLWebpackPluginConfig,
       new webpack.optimize.CommonsChunkPlugin('common.js'),
     new ExtractTextPlugin('index.css')
   ]
