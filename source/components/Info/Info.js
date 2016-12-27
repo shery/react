@@ -10,16 +10,16 @@ class Info extends Component {
     };
   }
   componentDidMount() {
-    $.get(this.props.source, (result) => {
-      const data = result;
-      if (data) {
-        this.setState({
-          username: data.name,
-          githubUrl: data.html_url,
-          avatarUrl: data.avatar_url
-        });
-      }
-    });
+    // $.get(this.props.source, (result) => {
+    //   const data = result;
+    //   if (data) {
+    //     this.setState({
+    //       username: data.name,
+    //       githubUrl: data.html_url,
+    //       avatarUrl: data.avatar_url
+    //     });
+    //   }
+    // });
   }
   render() {
     return (
