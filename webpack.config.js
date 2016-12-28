@@ -6,7 +6,7 @@ const SRC_PATH = path.resolve(ROOT_PATH, 'source');
 const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 //   template: `${__dirname}/index.html`,
