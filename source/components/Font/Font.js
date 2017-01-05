@@ -7,9 +7,9 @@ class Canvas extends Component {
   }
   componentDidMount() {
     const oCanvas = document.createElement('canvas');
-    oCanvas.width = '200';
-    oCanvas.height = '400';
-    oCanvas.style = 'border:1px solid #000000;';
+    // oCanvas.width = '200';
+    // oCanvas.height = '400';
+    // oCanvas.style = 'border:1px solid #000000;';
     const oCtx = oCanvas.getContext('2d');
     oCtx.font = '30px KaiTi';
     oCtx.fillText('长歌行', 10, 50);
