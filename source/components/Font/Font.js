@@ -11,8 +11,8 @@ class Canvas extends Component {
     // oCanvas.height = '400';
     // oCanvas.style = 'border:1px solid #000000;';
     const oCtx = oCanvas.getContext('2d');
-    oCtx.font = '30px KaiTi';
-    oCtx.fillText('长歌行', 10, 50);
+    // oCtx.font = '30px KaiTi';
+    // oCtx.fillText('长歌行', 10, 50);
     document.body.appendChild(oCanvas);
   }
   render() {
@@ -52,8 +52,8 @@ class Font extends Component {
       oCtx.direction = 'rtl';
       oCtx.textAlign = 'center';
       // const textLength = oCtx.measureText('花开堪折直须折');
-      oCtx.fillText('花开堪折直须折', 20, 192);
-      oCtx.fillText('莫待无花空折枝', 20, 208);
+      // oCtx.fillText('花开堪折直须折', 20, 192);
+      // oCtx.fillText('莫待无花空折枝', 20, 208);
     };
     img.src = 'http://pic.qiantucdn.com/58pic/18/09/24/158PICn58PICHEa_1024.jpg';
     document.body.appendChild(oCanvas);
