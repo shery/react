@@ -61,8 +61,7 @@ module.exports = {
         features: {
           autoprefixer: { browsers: ['> 0.01%'] }
         }
-      }),
-      require('cssgrace')
+      })
     ];
   },
   plugins: [
