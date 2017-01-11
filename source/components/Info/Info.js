@@ -9,18 +9,6 @@ class Info extends Component {
       avatarUrl: ''
     };
   }
-  // componentDidMount() {
-  //   $.get(this.props.source, (result) => {
-  //     const data = result;
-  //     if (data) {
-  //       this.setState({
-  //         username: data.name,
-  //         githubUrl: data.html_url,
-  //         avatarUrl: data.avatar_url
-  //       });
-  //     }
-  //   });
-  // }
   render() {
     return (
       <div>
