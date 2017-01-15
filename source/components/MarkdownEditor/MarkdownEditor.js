@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import Remarkable from 'remarkable';
 
 class MarkdownEditor extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.handleChange = this.handleChange.bind(this);
-  //   this.state = {
-  //     value: 'Type some *markdown* here!'
-  //   };
-  // }
-  // handleChange() {
-  //   this.setState({ value: this.textarea.value });
-  // }
-  // rawMarkup() {
-  //   const md = new Remarkable();
-  //   return { __html: md.render(this.state.value) };
-  // }
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      value: 'Type some *markdown* here!'
+    };
+  }
+  handleChange() {
+    this.setState({ value: this.textarea.value });
+  }
+  rawMarkup() {
+    const md = new Remarkable();
+    return { __html: md.render(this.state.value) };
+  }
 
   render() {
     return (
