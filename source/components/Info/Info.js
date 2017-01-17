@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 class Info extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: 'shery',
-      githubUrl: '',
-      avatarUrl: ''
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     username: 'shery',
+  //     githubUrl: '',
+  //     avatarUrl: ''
+  //   };
+  // }
   render() {
     return (
       <div>
