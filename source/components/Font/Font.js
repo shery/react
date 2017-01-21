@@ -1,35 +1,5 @@
 import React, { Component } from 'react';
 
-class Canvas extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  componentDidMount() {
-    const oCanvas = document.createElement('canvas');
-    oCanvas.width = '200';
-    oCanvas.height = '400';
-    oCanvas.style = 'border:1px solid #000000;';
-    const oCtx = oCanvas.getContext('2d');
-    oCtx.font = '30px KaiTi';
-    oCtx.fillText('长歌行', 10, 50);
-    document.body.appendChild(oCanvas);
-  }
-  render() {
-    return (
-      <canvas id="myCanvas" />
-    );
-  }
-}
-const FontList = props => (
-  <select>
-    {
-      props.fontFaces.map(item => (
-        <option key={item.id}>{item.name}</option>
-      ))
-    }
-  </select>
-);
 class Font extends Component {
   constructor(props) {
     super(props);
