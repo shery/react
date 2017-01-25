@@ -25,12 +25,12 @@ class Font extends Component {
     img.src = 'http://pic.qiantucdn.com/58pic/18/09/24/158PICn58PICHEa_1024.jpg';
     document.body.appendChild(oCanvas);
   }
-  // componentWillUnmount() {
-  //   clearInterval(this.interval);
-  // }
-  // tick() {
-  //   this.setState({ secondsElapsed: this.state.secondsElapsed + 1 });
-  // }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  tick() {
+    this.setState({ secondsElapsed: this.state.secondsElapsed + 1 });
+  }
   render() {
     return (
       <div>
