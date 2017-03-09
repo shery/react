@@ -3,7 +3,7 @@ import { Link, IndexLink } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from '../../css/bulma.css';
 
-const App = (props) => (
+const App = props => (
   <div className="tabs">
     <ul>
       <li><IndexLink to="/">HOME</IndexLink></li>
