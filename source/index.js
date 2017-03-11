@@ -7,7 +7,6 @@ import Greeter from './components/Greeter';
 import Todo from './components/Todo';
 import MarkdownEditor from './components/MarkdownEditor';
 import Info from './components/Info';
-import Font from './components/Font';
 
 
 import './css/index.css';
@@ -20,7 +19,6 @@ render(
       <Route path="/todo" component={Todo} />
       <Route path="/info" component={Info} />
       <Route path="/markdowneditor" component={MarkdownEditor} />
-      <Route path="/font" component={Font} />
     </Route>
   </Router>,
   document.getElementById('root'));

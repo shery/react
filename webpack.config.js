@@ -4,13 +4,14 @@ const path = require('path');
 
 const ROOT_PATH = path.resolve(__dirname);
 const SRC_PATH = path.resolve(ROOT_PATH, 'source');
-// const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
+const BUILD_PATH = path.resolve(ROOT_PATH, 'docs');
+const TEM_PATH = path.resolve(SRC_PATH, 'templates');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const Index = new HtmlWebpackPlugin({
-  template: path.resolve(ROOT_PATH, 'index.html'),
+const IndexPage = new HtmlWebpackPlugin({
+  template: path.resolve(TEM_PATH, 'index.html'),
   filename: 'index.html',
   chunks: ['index'],
   inject: 'body'
@@ -30,8 +31,8 @@ module.exports = {
     index: path.resolve(SRC_PATH, 'index.js')
   },
   output: {
-    path: ROOT_PATH,
-    filename: 'bundle/[name].js'
+    path: BUILD_PATH,
+    filename: 'js/[name].[hash:5].js'
   },
   externals: {
     jquery: 'window.$'
@@ -68,15 +69,15 @@ module.exports = {
     ];
   },
   devServer: {
-    contentBase: ROOT_PATH,
+    contentBase: BUILD_PATH,
     inline: true,
     port: 8008
   },
   plugins: [
     // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.CommonsChunkPlugin('commons', 'bundle/commons.js'),
-    new ExtractTextPlugin('bundle/[name].css'),
-    Index
+    new webpack.optimize.CommonsChunkPlugin('commons', 'js/commons.[hash:5].js'),
+    new ExtractTextPlugin('css/[name].[hash:5].css'),
+    IndexPage
   ]
 };
