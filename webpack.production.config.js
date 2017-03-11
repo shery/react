@@ -75,7 +75,10 @@ module.exports = {
   plugins: [
     new webpack.BannerPlugin('Copyright 2017 by shery'),
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
-    new webpack.optimize.CommonsChunkPlugin('commons', 'js/commons.[hash:5].js'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'commons',
+      filename: 'js/commons.[hash:5].js'
+    }),
     new ExtractTextPlugin('css/[name].[hash:5].css', {
       allChunks: true
     }),
