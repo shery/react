@@ -47,8 +47,8 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
-          'style-loader?sourceMap',
-          'css-loader?modules&importLoaders=1&localIdentName=[path]_[name]_[local]_[hash:base64:5]!postcss-loader?sourceMap'
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[path]_[name]_[local]_[hash:base64:5]!postcss-loader?sourceMap=inline'
         )
       },
       {
@@ -74,8 +74,6 @@ module.exports = {
     port: 8008
   },
   plugins: [
-    // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
       filename: 'js/commons.[hash:5].js'
