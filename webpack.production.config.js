@@ -1,21 +1,21 @@
 const webpack = require('webpack');
 // 定义了一些文件夹的路径
-// const path = require('path');
-// const ROOT_PATH = path.resolve(__dirname);
-// const APP_PATH = path.resolve(ROOT_PATH, 'source');
-// const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
+const path = require('path');
+
+const ROOT_PATH = path.resolve(__dirname);
+const SRC_PATH = path.resolve(ROOT_PATH, 'source');
+const BUILD_PATH = path.resolve(ROOT_PATH, 'docs');
+const TEM_PATH = path.resolve(SRC_PATH, 'templates');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
-// 使用 HtmlWebpackPlugin，将 bundle 好的 <script> 插入到 body。${__dirname} 为 ES6 语法对应的 __dirname
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-//   template: `${__dirname}/index.html`,
-//   filename: 'indexbundle.html',
-//   inject: 'body'
-// });
+const IndexPage = new HtmlWebpackPlugin({
+  template: path.resolve(TEM_PATH, 'index.html'),
+  filename: 'index.html',
+  chunks: ['index', 'commons'],
+  inject: 'body'
+});
 
 module.exports = {
   resolve: {
@@ -26,12 +26,12 @@ module.exports = {
       '.css'
     ]
   },
-  entry: [
-    './source/index.js'
-  ],
+  entry: {
+    index: path.resolve(SRC_PATH, 'index.js')
+  },
   output: {
-    path: `${__dirname}/bundle/`,
-    filename: 'bundle.js'
+    path: BUILD_PATH,
+    filename: 'js/[name].[hash:5].js'
   },
   module: {
     loaders: [
@@ -44,7 +44,7 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+          'css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]!postcss-loader'
         )
       },
       {
@@ -59,16 +59,26 @@ module.exports = {
       require('postcss-url')(),
       require('postcss-cssnext')({
         features: {
-          autoprefixer: { browsers: ['> 0.01%'] }
+          autoprefixer: { browsers: [
+            'Android >= 4',
+            'Chrome >= 20',
+            'Firefox >= 24',
+            'Explorer >= 9',
+            'iOS >= 6',
+            'Opera >= 12',
+            'Safari >= 6'
+          ] }
         }
       })
     ];
   },
   plugins: [
-    new webpack.BannerPlugin('Copyright 2016 by shery'),
+    new webpack.BannerPlugin('Copyright 2017 by shery'),
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
-    new ExtractTextPlugin('index.css', {
+    new webpack.optimize.CommonsChunkPlugin('commons', 'js/commons.[hash:5].js'),
+    new ExtractTextPlugin('css/[name].[hash:5].css', {
       allChunks: true
-    })
+    }),
+    IndexPage
   ]
 };

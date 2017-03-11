@@ -13,7 +13,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const IndexPage = new HtmlWebpackPlugin({
   template: path.resolve(TEM_PATH, 'index.html'),
   filename: 'index.html',
-  chunks: ['index'],
+  chunks: ['index', 'commons'],
   inject: 'body'
 });
 
