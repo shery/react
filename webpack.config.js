@@ -1,18 +1,20 @@
 const webpack = require('webpack');
 // 定义了一些文件夹的路径
 const path = require('path');
+
 const ROOT_PATH = path.resolve(__dirname);
 const SRC_PATH = path.resolve(ROOT_PATH, 'source');
-const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
+// const BUILD_PATH = path.resolve(ROOT_PATH, 'bundle');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-//   template: `${__dirname}/index.html`,
-//   filename: 'indexbundle.html',
-//   inject: 'body'
-// });
+const Index = new HtmlWebpackPlugin({
+  template: path.resolve(ROOT_PATH, 'index.html'),
+  filename: 'index.html',
+  chunks: ['index'],
+  inject: 'body'
+});
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -24,12 +26,15 @@ module.exports = {
       '.css'
     ]
   },
-  entry: [
-    './source/index.js'
-  ],
+  entry: {
+    index: path.resolve(SRC_PATH, 'index.js')
+  },
   output: {
-    path: `${__dirname}/bundle/`,
-    filename: 'bundle.js'
+    path: ROOT_PATH,
+    filename: 'bundle/[name].js'
+  },
+  externals: {
+    jquery: 'window.$'
   },
   module: {
     loaders: [
@@ -42,7 +47,7 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
           'style-loader?sourceMap',
-          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap'
+          'css-loader?modules&importLoaders=1&localIdentName=[path]_[name]_[local]_[hash:base64:5]!postcss-loader?sourceMap'
         )
       },
       {
@@ -63,14 +68,15 @@ module.exports = {
     ];
   },
   devServer: {
+    contentBase: ROOT_PATH,
     inline: true,
     port: 8008
   },
   plugins: [
     // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
     new webpack.optimize.OccurenceOrderPlugin(),
-    // HTMLWebpackPluginConfig,
-      new webpack.optimize.CommonsChunkPlugin('common.js'),
-    new ExtractTextPlugin('index.css')
+    new webpack.optimize.CommonsChunkPlugin('commons', 'bundle/commons.js'),
+    new ExtractTextPlugin('bundle/[name].css'),
+    Index
   ]
 };
