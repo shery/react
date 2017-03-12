@@ -4,8 +4,8 @@
   "description": "reactdemo",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --host 0.0.0.0",
-    "build": "webpack --progress --profile --colors --config webpack.production.config.js"
+    "dev": "NODE_ENV=development webpack-dev-server --devtool eval --progress --colors --hot --inline --host 0.0.0.0",
+    "build": "NODE_ENV=production webpack --progress --profile --colors --config webpack.production.config.js"
   },
   "repository": {
     "type": "git",
