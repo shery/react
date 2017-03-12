@@ -30,7 +30,7 @@ module.exports = {
   },
   output: {
     path: BUILD_PATH,
-    filename: 'js/[name].[hash:5].js'
+    filename: 'js/[name].[chunkhash:5].js'
   },
   module: {
     rules: [
@@ -89,10 +89,10 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
-      filename: 'js/commons.[hash:5].js'
+      filename: 'js/commons.[chunkhash:5].js'
     }),
     new ExtractTextPlugin({
-      filename: 'css/[name].[hash:5].css',
+      filename: 'css/[name].[chunkhash:5].css',
       disable: false,
       allChunks: true
     }),
