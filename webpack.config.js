@@ -1,4 +1,4 @@
-// const config = require('../config');
+const config = require('./config');
 const webpack = require('webpack');
 // 定义了一些文件夹的路径
 const path = require('path');
@@ -18,9 +18,10 @@ const IndexPage = new HtmlWebpackPlugin({
   inject: 'body'
 });
 
-// const env = config.build.env;
+const env = config.build.env;
+const ctx = { parser: true, map: 'inline' };
 
-module.exports = env => ({
+module.exports = {
   devtool: 'eval-source-map',
   resolve: {
     extensions: [
@@ -76,9 +77,9 @@ module.exports = env => ({
     port: 8008
   },
   plugins: [
-    // new webpack.DefinePlugin({
-    //   'process.env': env
-    // }),
+    new webpack.DefinePlugin({
+      'process.env': env
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
       filename: 'js/commons.[hash:5].js'
@@ -90,4 +91,4 @@ module.exports = env => ({
     }),
     IndexPage
   ]
-});
+};
