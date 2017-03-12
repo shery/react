@@ -1,4 +1,3 @@
-const config = require('./config');
 const webpack = require('webpack');
 // 定义了一些文件夹的路径
 const path = require('path');
@@ -17,9 +16,6 @@ const IndexPage = new HtmlWebpackPlugin({
   chunks: ['index', 'commons'],
   inject: 'body'
 });
-
-const env = config.build.env;
-const ctx = { parser: true, map: 'inline' };
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -61,7 +57,21 @@ module.exports = {
                 localIdentName: '[path]_[name]_[local]_[hash:base64:5]'
               }
             },
-            'postcss-loader'
+            {
+              loader: 'postcss-loader',
+              options: {
+                map: 'inline',
+                plugins: () => [
+                  require('postcss-import')({ addDependencyTo: webpack }),
+                  require('postcss-url')(),
+                  require('postcss-cssnext')({
+                    features: {
+                      autoprefixer: { browsers: ['> 5%'] }
+                    }
+                  })
+                ]
+              }
+            }
           ]
         })
       },
@@ -77,9 +87,6 @@ module.exports = {
     port: 8008
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': env
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
       filename: 'js/commons.[hash:5].js'

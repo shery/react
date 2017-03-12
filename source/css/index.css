@@ -1,12 +1,4 @@
-/*@font-face {font-family: 'LiSu';
-  src: url('/../react/source/fonts/LiSu.ttf') format('truetype');
-}
-@font-face {font-family: 'KaiTi';
-  src: url('/../react/source/fonts/KaiTi.ttf') format('truetype');
-}
-@font-face {font-family: 'AMCSongGBK-Light';
-  src: url('/../react/source/fonts/AMCSongGBK-Light.ttf') format('truetype');
-}*/
 html {
   box-sizing: border-box;
+  display: flex;
 }

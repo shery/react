@@ -52,7 +52,29 @@ module.exports = {
                 localIdentName: '[path]_[name]_[local]_[hash:base64:5]'
               }
             },
-            'postcss-loader'
+            {
+              loader: 'postcss-loader',
+              options: {
+                map: 'inline',
+                plugins: () => [
+                  require('postcss-import')({ addDependencyTo: webpack }),
+                  require('postcss-url')(),
+                  require('postcss-cssnext')({
+                    features: {
+                      autoprefixer: { browsers: [
+                        'Android >= 4',
+                        'Chrome >= 20',
+                        'Firefox >= 24',
+                        'Explorer >= 9',
+                        'iOS >= 6',
+                        'Opera >= 12',
+                        'Safari >= 6'
+                      ] }
+                    }
+                  })
+                ]
+              }
+            }
           ]
         })
       },
@@ -63,7 +85,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.BannerPlugin({ banner: 'Copyright 2017 by shery', raw: true, entryOnly: true }),
+    new webpack.BannerPlugin({ banner: '', raw: true, entryOnly: true }),
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
