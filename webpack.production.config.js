@@ -20,7 +20,6 @@ const IndexPage = new HtmlWebpackPlugin({
 module.exports = {
   resolve: {
     extensions: [
-      '',
       '.js',
       '.json',
       '.css'
@@ -34,7 +33,7 @@ module.exports = {
     filename: 'js/[name].[hash:5].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -42,10 +41,20 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]!postcss-loader'
-        )
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                importLoaders: 1,
+                localIdentName: '[path]_[name]_[local]_[hash:base64:5]'
+              }
+            },
+            'postcss-loader'
+          ]
+        })
       },
       {
         test: /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
@@ -73,13 +82,15 @@ module.exports = {
     ];
   },
   plugins: [
-    new webpack.BannerPlugin('Copyright 2017 by shery'),
+    new webpack.BannerPlugin({ banner: 'Copyright 2017 by shery', raw: true, entryOnly: true }),
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
       filename: 'js/commons.[hash:5].js'
     }),
-    new ExtractTextPlugin('css/[name].[hash:5].css', {
+    new ExtractTextPlugin({
+      filename: 'css/[name].[hash:5].css',
+      disable: false,
       allChunks: true
     }),
     IndexPage
