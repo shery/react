@@ -22,19 +22,13 @@ const App = () => (
         <li><Link to="/markdowneditor">MarkdownEditor</Link></li>
       </ul>
       <hr />
-      <Route exact path="/" component={Greeter} />
+      <Route exact path="/" render={() => <Greeter name="Router v4.0" />} />
       <Route path="/topics" component={Topics} />
       <Route path="/todo" component={Todo} />
       <Route path="/info" component={Info} />
       <Route path="/markdowneditor" component={MarkdownEditor} />
     </div>
   </Router>
-);
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
 );
 
 const Topics = ({ match }) => (
@@ -62,6 +56,12 @@ const Topics = ({ match }) => (
     <Route exact path={match.url} render={() => (
       <h3>Please select a topic.</h3>
     )} />
+  </div>
+);
+
+const Topic = ({ match }) => (
+  <div>
+    <h3>{match.params.topicId}</h3>
   </div>
 );
 
