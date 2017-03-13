@@ -43,7 +43,7 @@ class Todo extends Component {
 }
 
 TodoList.propTypes = {
-  items: React.PropTypes.array.isRequired
+  items: React.PropTypes.isRequired
 };
 
 export default Todo;
