@@ -6418,8 +6418,4 @@ a.source-css-_bulma_panel-block_2Q2tE:hover {
 html {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
