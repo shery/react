@@ -3,11 +3,33 @@ import React, { Component } from 'react';
 class Info extends Component {
   constructor(props) {
     super(props);
+    this.getInfo = this.getInfo.bind(this);
     this.state = {
-      username: 'shery',
-      githubUrl: 'https://github.com/shery15',
-      avatarUrl: 'https://avatars2.githubusercontent.com/u/12773365?v=3'
+      username: '',
+      githubUrl: '',
+      avatarUrl: ''
     };
+  }
+  componentDidMount() {
+    this.getInfo();
+  }
+  getInfo() {
+    // fetch('https://api.github.com/users/shery15').then((response) => {
+    //   const info = response.json();
+    //   this.setState({
+    //     username: info.name,
+    //     githubUrl: info.html_url,
+    //     avatarUrl: info.avatar_url
+    //   });
+    // }).then(data => console.log(data))
+    //   .catch(e => console.log('Oops, error', e));
+    $.get('https://api.github.com/users/shery15', (result) => {
+      this.setState({
+        username: result.name,
+        githubUrl: result.html_url,
+        avatarUrl: result.avatar_url
+      });
+    });
   }
   render() {
     return (
@@ -19,8 +41,8 @@ class Info extends Component {
     );
   }
 }
-Info.propTypes = {
-  source: React.PropTypes.string
-};
+// Info.propTypes = {
+//   source: React.PropTypes.string
+// };
 
 export default Info;
