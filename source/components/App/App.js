@@ -10,6 +10,8 @@ import Greeter from '../Greeter';
 import Todo from '../Todo';
 import MarkdownEditor from '../MarkdownEditor';
 import Info from '../Info';
+import AuthExample from '../Login';
+
 
 const App = () => (
   <Router>
@@ -20,6 +22,7 @@ const App = () => (
         <li><Link to="/info">Info</Link></li>
         <li><Link to="/todo">Todo</Link></li>
         <li><Link to="/markdowneditor">MarkdownEditor</Link></li>
+        <li><Link to="/auth">AuthExample</Link></li>
       </ul>
       <hr />
       <Route exact path="/" render={() => <Greeter name="Router v4.0" />} />
@@ -27,6 +30,7 @@ const App = () => (
       <Route path="/todo" component={Todo} />
       <Route path="/info" component={Info} />
       <Route path="/markdowneditor" component={MarkdownEditor} />
+      <Route path="/auth" component={AuthExample} />
     </div>
   </Router>
 );
