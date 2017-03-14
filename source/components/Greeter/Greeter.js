@@ -23,17 +23,21 @@ class Greeter extends Component {
     return (
       <div styleName="outer">
         <div styleName="inner">
-          <span styleName="context">Hi {this.props.name}! tick: {this.state.secondsElapsed}</span>
+          <span styleName="context">
+            Hi {this.props.route.name}! tick: {this.state.secondsElapsed}
+          </span>
         </div>
       </div>
     );
   }
 }
 Greeter.propTypes = {
-  name: React.PropTypes.string
+  route: React.PropTypes.object
 };
 Greeter.defaultProps = {
-  name: 'props'
+  route: {
+    name: 'world'
+  }
 };
 
 export default CSSModules(Greeter, styles, { allowMultiple: true });

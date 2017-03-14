@@ -32,7 +32,7 @@ const App = () => (
         <li><OldSchoolMenuLink to="/auth" label="AuthExample" /></li>
       </ul>
       <hr />
-      <Route exact path="/" render={() => <Greeter name="Router v4.0" />} />
+      <Route exact path="/" name="Router v4.0" component={Greeter} />
       <Route path="/topics" component={Topics} />
       <Route path="/todo" component={Todo} />
       <Route path="/info" component={Info} />

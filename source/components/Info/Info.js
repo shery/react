@@ -1,4 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+
+const InfoName = ({ name }) => <h3>{name}</h3>;
+InfoName.defaultProps = {
+  name: 'shery15'
+};
+InfoName.propTypes = {
+  name: PropTypes.string.required
+};
 
 class Info extends Component {
   constructor(props) {
@@ -34,15 +42,13 @@ class Info extends Component {
   render() {
     return (
       <div>
-        <h3>{this.state.username}</h3>
+        <InfoName name={this.state.username} />
         <img src={this.state.avatarUrl} alt="avatar" />
         <a href={this.state.githubUrl}>link</a>
       </div>
     );
   }
 }
-// Info.propTypes = {
-//   source: React.PropTypes.string
-// };
+
 
 export default Info;
