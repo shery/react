@@ -13,6 +13,7 @@ import MarkdownEditor from '../MarkdownEditor';
 import Info from '../Info';
 import AuthExample from '../Login';
 import Prompt from '../Prompt';
+import Animation from '../Animation';
 
 const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
   <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
@@ -33,6 +34,7 @@ const App = () => (
         <li><OldSchoolMenuLink to="/markdowneditor" label="MarkdownEditor" /></li>
         <li><OldSchoolMenuLink to="/auth" label="AuthExample" /></li>
         <li><OldSchoolMenuLink to="/prompt" label="Prompt" /></li>
+        <li><OldSchoolMenuLink to="/animation" label="Animation" /></li>
         <li><OldSchoolMenuLink to="/404" label="404" /></li>
       </ul>
       <hr />
@@ -43,6 +45,7 @@ const App = () => (
         <Route path="/info" component={Info} />
         <Route path="/markdowneditor" component={MarkdownEditor} />
         <Route path="/auth" component={AuthExample} />
+        <Route path="/animation" component={Animation} />
         <Route path="/prompt" component={Prompt} />
         <Route component={NoMatch}/>
       </Switch>
