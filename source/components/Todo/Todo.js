@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
-const TodoList = props => (
-  <ul>
-    {
-      props.items.map(item => (
-        <li key={item.id}>{item.text}</li>
-      ))
-    }
-  </ul>
-);
+function TodoList(props) {
+  return (
+    <ul>
+      {
+        props.items.map(item => (
+          <li key={item.id}>{item.text}</li>
+        ))
+      }
+    </ul>
+  );
+}
 class Todo extends Component {
   constructor(props) {
     super(props);
