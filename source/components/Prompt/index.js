@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Prompt
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 const PreventingTransitionsExample = () => (
   <Router>
@@ -14,29 +14,31 @@ const PreventingTransitionsExample = () => (
         <li><Link to="/one">One</Link></li>
         <li><Link to="/two">Two</Link></li>
       </ul>
-      <Route path="/" exact component={Form}/>
-      <Route path="/one" render={() => <h3>One</h3>}/>
-      <Route path="/two" render={() => <h3>Two</h3>}/>
+      <Route path="/" exact component={Form} />
+      <Route path="/one" render={() => <h3>One</h3>} />
+      <Route path="/two" render={() => <h3>Two</h3>} />
     </div>
   </Router>
-)
+);
 
 class Form extends React.Component {
-  state = {
-    isBlocking: false
+  constructor(props) {
+    super(props);
+    this.state = {
+      isBlocking: false
+    };
   }
-
   render() {
-    const { isBlocking } = this.state
+    const { isBlocking } = this.state;
 
     return (
       <form
-        onSubmit={event => {
-          event.preventDefault()
-          event.target.reset()
+        onSubmit={(event) => {
+          event.preventDefault();
+          event.target.reset();
           this.setState({
             isBlocking: false
-          })
+          });
         }}
       >
         <Prompt
@@ -54,10 +56,10 @@ class Form extends React.Component {
           <input
             size="50"
             placeholder="type something to block transitions"
-            onChange={event => {
+            onChange={(event) => {
               this.setState({
                 isBlocking: event.target.value.length > 0
-              })
+              });
             }}
           />
         </p>
@@ -66,8 +68,8 @@ class Form extends React.Component {
           <button>Submit to stop blocking</button>
         </p>
       </form>
-    )
+    );
   }
 }
 
-export default PreventingTransitionsExample
+export default PreventingTransitionsExample;
