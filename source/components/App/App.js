@@ -11,6 +11,7 @@ import Todo from '../Todo';
 import MarkdownEditor from '../MarkdownEditor';
 import Info from '../Info';
 import AuthExample from '../Login';
+import Prompt from '../Prompt';
 
 const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
   <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
@@ -30,6 +31,7 @@ const App = () => (
         <li><OldSchoolMenuLink to="/todo" label="Todo" /></li>
         <li><OldSchoolMenuLink to="/markdowneditor" label="MarkdownEditor" /></li>
         <li><OldSchoolMenuLink to="/auth" label="AuthExample" /></li>
+        <li><OldSchoolMenuLink to="/prompt" label="Prompt" /></li>
       </ul>
       <hr />
       <Route exact path="/" name="Router v4.0" component={Greeter} />
@@ -38,6 +40,7 @@ const App = () => (
       <Route path="/info" component={Info} />
       <Route path="/markdowneditor" component={MarkdownEditor} />
       <Route path="/auth" component={AuthExample} />
+      <Route path="/prompt" component={Prompt} />
     </div>
   </Router>
 );
