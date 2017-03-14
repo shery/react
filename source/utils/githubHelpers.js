@@ -10,9 +10,9 @@ function getUserInfo(username) {
 
 const helpers = {
   getPlayersInfo(players) {
-    return axios.all(players.map(username => getUserInfo(username))
+    return axios.all(players.map(username => getUserInfo(username)))
     .then(info => info.map(user => user.data))
-    .catch(err => console.warn('Error in getPlayersInfo', err))
+    .catch(err => console.warn('Error in getPlayersInfo', err));
   }
 };
 
