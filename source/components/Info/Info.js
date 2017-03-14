@@ -35,6 +35,7 @@ class Info extends Component {
     this.onChange = this.onChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
+      login: '',
       username: '',
       githubUrl: '',
       avatarUrl: '',
@@ -45,10 +46,7 @@ class Info extends Component {
   //   this.getInfo();
   // }
   onChange(e) {
-    this.setState({
-      username: e.target.value,
-      isLoading: true
-    });
+    this.setState({ login: e.target.value });
   }
   getInfo() {
     // fetch('https://api.github.com/users/shery15').then((response) => {
@@ -60,7 +58,7 @@ class Info extends Component {
     //   });
     // }).then(data => console.log(data))
     //   .catch(e => console.log('Oops, error', e));
-    $.get('https://api.github.com/users/' + this.state.username, (result) => {
+    $.get('https://api.github.com/users/' + this.state.login, (result) => {
       this.setState({
         username: result.name,
         githubUrl: result.html_url,
@@ -71,13 +69,16 @@ class Info extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
+    this.setState({
+      isLoading: true
+    });
     this.getInfo();
   }
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.onChange} value={this.state.username} />
+          <input onChange={this.onChange} value={this.state.login} />
           <button>search</button>
         </form>
         <InfoUI
