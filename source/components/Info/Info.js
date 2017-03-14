@@ -1,7 +1,25 @@
 import React, { Component, PropTypes } from 'react';
 
+function InfoUI(props) {
+  return (
+    props.isLoading === true
+    ? <p>Loading</p>
+    : <InfoName
+      name={props.name}
+      avatarUrl={props.avatarUrl}
+      githubUrl={props.githubUrl}
+    />
+  );
+}
+
 function InfoName(props) {
-  return <h3>{props.name}</h3>;
+  return (
+    <div>
+      <h3>{props.name}</h3>
+      <img src={props.avatarUrl} alt="avatar" />
+      <a href={props.githubUrl}>link</a>
+    </div>
+  );
 }
 InfoName.defaultProps = {
   name: 'shery15'
@@ -17,7 +35,8 @@ class Info extends Component {
     this.state = {
       username: '',
       githubUrl: '',
-      avatarUrl: ''
+      avatarUrl: '',
+      isLoading: true
     };
   }
   componentDidMount() {
@@ -37,16 +56,20 @@ class Info extends Component {
       this.setState({
         username: result.name,
         githubUrl: result.html_url,
-        avatarUrl: result.avatar_url
+        avatarUrl: result.avatar_url,
+        isLoading: false
       });
     });
   }
   render() {
     return (
       <div>
-        <InfoName name={this.state.username} />
-        <img src={this.state.avatarUrl} alt="avatar" />
-        <a href={this.state.githubUrl}>link</a>
+        <InfoUI
+          isLoading={this.state.isLoading}
+          name={this.state.username}
+          avatarUrl={this.state.avatarUrl}
+          githubUrl={this.state.githubUrl}
+        />
       </div>
     );
   }
