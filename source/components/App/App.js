@@ -12,17 +12,24 @@ import MarkdownEditor from '../MarkdownEditor';
 import Info from '../Info';
 import AuthExample from '../Login';
 
+const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
+  <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
+    <div className={match ? 'active' : ''}>
+      {match ? '> ' : ''}<Link to={to}>{label}</Link>
+    </div>
+  )}/>
+);
 
 const App = () => (
   <Router>
     <div className="tabs">
       <ul>
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/topics">Topics</Link></li>
-        <li><Link to="/info">Info</Link></li>
-        <li><Link to="/todo">Todo</Link></li>
-        <li><Link to="/markdowneditor">MarkdownEditor</Link></li>
-        <li><Link to="/auth">AuthExample</Link></li>
+        <li><OldSchoolMenuLink to="/" activeOnlyWhenExact={true} label="Home" /></li>
+        <li><OldSchoolMenuLink to="/topics" label="Topics" /></li>
+        <li><OldSchoolMenuLink to="/info" label="Info" /></li>
+        <li><OldSchoolMenuLink to="/todo" label="Todo" /></li>
+        <li><OldSchoolMenuLink to="/markdowneditor" label="MarkdownEditor" /></li>
+        <li><OldSchoolMenuLink to="/auth" label="AuthExample" /></li>
       </ul>
       <hr />
       <Route exact path="/" render={() => <Greeter name="Router v4.0" />} />
