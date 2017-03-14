@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-const InfoName = ({ name }) => <h3>{name}</h3>;
+const InfoName = props => <h3>{props.name}</h3>;
 InfoName.defaultProps = {
   name: 'shery15'
 };

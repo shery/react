@@ -9,6 +9,9 @@ class Greeter extends Component {
     this.state = {
       secondsElapsed: 0
     };
+    this.context = {
+      route: React.PropTypes.object
+    };
   }
   componentDidMount() {
     this.interval = setInterval(this.tick, 1000);
