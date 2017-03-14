@@ -50,10 +50,10 @@ const AuthButton = withRouter(({ history }) => (
 
 const PrivateRoute = ({
   component,
-  ...rest
+  props
 }) => (
   <Route
-    {...rest}
+    {...props}
     render={props => (
     fakeAuth.isAuthenticated ? (
       React.createElement(component, props)
