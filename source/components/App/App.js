@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
+  Switch,
   Link
 } from 'react-router-dom';
 import CSSModules from 'react-css-modules';
@@ -32,18 +33,28 @@ const App = () => (
         <li><OldSchoolMenuLink to="/markdowneditor" label="MarkdownEditor" /></li>
         <li><OldSchoolMenuLink to="/auth" label="AuthExample" /></li>
         <li><OldSchoolMenuLink to="/prompt" label="Prompt" /></li>
+        <li><OldSchoolMenuLink to="/404" label="404" /></li>
       </ul>
       <hr />
-      <Route exact path="/" name="Router v4.0" component={Greeter} />
-      <Route path="/topics" component={Topics} />
-      <Route path="/todo" component={Todo} />
-      <Route path="/info" component={Info} />
-      <Route path="/markdowneditor" component={MarkdownEditor} />
-      <Route path="/auth" component={AuthExample} />
-      <Route path="/prompt" component={Prompt} />
+      <Switch>
+        <Route exact path="/" name="Router v4.0" component={Greeter} />
+        <Route path="/topics" component={Topics} />
+        <Route path="/todo" component={Todo} />
+        <Route path="/info" component={Info} />
+        <Route path="/markdowneditor" component={MarkdownEditor} />
+        <Route path="/auth" component={AuthExample} />
+        <Route path="/prompt" component={Prompt} />
+        <Route component={NoMatch}/>
+      </Switch>
     </div>
   </Router>
 );
+
+const NoMatch = ({ location }) => (
+  <div>
+    <h3>No match for <code>{location.pathname}</code></h3>
+  </div>
+)
 
 const Topics = ({ match }) => (
   <div>
