@@ -3,7 +3,7 @@ import createLogger from 'redux-logger';
 import Immutable from 'immutable';
 import rootReducer from '../reducers';
 
-const initialState = Immutable.map();
+const initialState = Immutable.Map();
 
 export default createStore(
   rootReducer,
