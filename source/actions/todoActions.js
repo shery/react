@@ -7,4 +7,4 @@ import {
 
 export const createTodo = createAction('CREATE_TODO');
 export const deleteTodo = createAction('DELETE_TODO');
-export const changeTodo = createAction('CHANGE_TEXT');
+export const changeText = createAction('CHANGE_TEXT');
