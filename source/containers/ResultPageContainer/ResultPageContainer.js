@@ -3,6 +3,7 @@ import ResultPage from '../../components/ResultPage';
 
 export default connect(
   state => ({
-    data: state.getIn(['github', 'data'])
+    data: state.getIn(['github', 'data']),
+    userId: state.getIn(['github', 'userId'])
   })
 )(ResultPage);

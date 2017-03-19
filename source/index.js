@@ -37,8 +37,8 @@ render(
       <Router>
         <div>
           <Main />
-          <Route exact path="/" component={HomePageContainer} />
-          <Route path="/result" component={ResultPageContainer} />
+          <Route component={HomePageContainer} />
+          <ResultPageContainer />
         </div>
       </Router>
     </MuiThemeProvider>

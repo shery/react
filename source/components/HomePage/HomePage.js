@@ -8,22 +8,20 @@ const HomePage = ({
   onSubmitUserId,
   onChangeUserId
 }) => {
-  console.log(userId);
-
   return (
     <div>
       <TextField
         hintText="Please Key in your Github User Id."
         onChange={onChangeUserId}
       />
+
+      <RaisedButton label="Submit" onClick={onSubmitUserId(userId)} primary />
       {/* <Link
         to={{
           pathname: '/result',
           query: { userId }
         }}
-      > */}
-      <RaisedButton label="Submit" onClick={onSubmitUserId(userId)} primary />
-      {/* </Link> */}
+      /> */}
     </div>
   );
   // return (
