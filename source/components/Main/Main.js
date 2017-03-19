@@ -1,12 +1,33 @@
-import React from 'react';
-import TodoHeaderContainer from '../../containers/TodoHeaderContainer';
-import TodoListContainer from '../../containers/TodoListContainer';
+// import React from 'react';
+// import TodoHeaderContainer from '../../containers/TodoHeaderContainer';
+// import TodoListContainer from '../../containers/TodoListContainer';
+//
+// const Main = () => (
+//   <div>
+//     <TodoHeaderContainer />
+//     <TodoListContainer />
+//   </div>
+// );
+//
+// export default Main;
 
-const Main = () => (
+import React from 'react';
+import AppBar from 'material-ui/AppBar';
+
+const Main = props => (
   <div>
-    <TodoHeaderContainer />
-    <TodoListContainer />
+    <AppBar
+      title="Github Finder"
+      showMenuIconButton={false}
+    />
+    <div>
+      {props.children}
+    </div>
   </div>
 );
+
+Main.propTypes = {
+  children: React.PropTypes.Object
+};
 
 export default Main;

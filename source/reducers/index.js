@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux-immutable';
-// import ui from './ui/uiReducers.js';
-import todo from './data/todoReducers.js';
+import ui from './ui/uiReducers';
+import github from './data/githubReducers';
 
 const rootReducer = combineReducers({
-  todo
+  ui,
+  github
 });
 
 export default rootReducer;
