@@ -1,2 +1,2 @@
 export * from './githubActions.js';
-export * from './uiActions';
+export * from './uiActions.js';

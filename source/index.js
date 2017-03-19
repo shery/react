@@ -36,8 +36,8 @@ render(
     <MuiThemeProvider>
       <Router>
         <div>
-          <Route path="/" component={Main} />
-          <Route path="/home" component={HomePageContainer} />
+          <Main />
+          <Route exact path="/" component={HomePageContainer} />
           <Route path="/result" component={ResultPageContainer} />
         </div>
       </Router>

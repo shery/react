@@ -7,27 +7,36 @@ const HomePage = ({
   userId,
   onSubmitUserId,
   onChangeUserId
-}) => (
-  <div>
-    <TextField
-      hintText="Please Key in your Github User Id."
-      onChange={onChangeUserId}
-    />
-    <Link
-      to={{
-        pathname: '/result',
-        query: { userId }
-      }}
-    >
-      <RaisedButton label="Submit" onClick={onSubmitUserId(userId.get('github'))} primary />
-    </Link>
-  </div>
-);
+}) => {
+  console.log(userId);
+
+  return (
+    <div>
+      <TextField
+        hintText="Please Key in your Github User Id."
+        onChange={onChangeUserId}
+      />
+      {/* <Link
+        to={{
+          pathname: '/result',
+          query: { userId }
+        }}
+      > */}
+      <RaisedButton label="Submit" onClick={onSubmitUserId(userId)} primary />
+      {/* </Link> */}
+    </div>
+  );
+  // return (
+  //   <div>
+
+  //   </div>
+  // );
+};
 
 HomePage.propTypes = {
   onSubmitUserId: React.PropTypes.func,
   onChangeUserId: React.PropTypes.func,
-  userId: React.PropTypes.function
+  userId: React.PropTypes.string
 };
 
 export default HomePage;

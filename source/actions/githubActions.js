@@ -15,7 +15,7 @@ export const getGithub = (userId = 'shery15') => (
   (dispatch) => {
     dispatch({ type: GET_GITHUB_INITIATE });
     dispatch(showSpinner());
-    fetch(`https://api.github.com/users/${userId}`)
+    fetch(['https://api.github.com/users/', userId].join(''))
       .then(response => response.json())
       .then((json) => {
         dispatch({ type: GET_GITHUB_SUCCESS, payload: { data: json } });

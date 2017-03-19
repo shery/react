@@ -1,1 +1,1 @@
-export { default } from './GithubBox';
+export { default } from './GithubBox.js';
