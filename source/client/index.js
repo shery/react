@@ -2,9 +2,9 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { fromJS } from 'immutable';
 import CounterContainer from '../common/containers/CounterContainer';
 import configureStore from '../common/store/configureStore'
-import { fromJS } from 'immutable';
 
 // get initial state from server side
 const initialState = window.__PRELOADED_STATE__;

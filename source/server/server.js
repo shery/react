@@ -1,15 +1,16 @@
 import Express from 'express';
 import qs from 'qs';
 
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { Provider } from 'react-redux';
+import { fromJS } from 'immutable';
+
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack.config';
 
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import { Provider } from 'react-redux';
-import { fromJS } from 'immutable';
 
 import configureStore from '../common/store/configureStore';
 import CounterContainer from '../common/containers/CounterContainer';
