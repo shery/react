@@ -7,7 +7,7 @@ const SRC_PATH = path.resolve(ROOT_PATH, 'source');
 const BUILD_PATH = path.resolve(ROOT_PATH, 'docs');
 const TEM_PATH = path.resolve(SRC_PATH, 'templates');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const IndexPage = new HtmlWebpackPlugin({
@@ -43,38 +43,38 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-                modules: true,
-                importLoaders: 1,
-                localIdentName: '[path]_[name]_[local]_[hash:base64:5]'
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                map: 'inline',
-                plugins: () => [
-                  require('postcss-import')({ addDependencyTo: webpack }),
-                  require('postcss-url')(),
-                  require('postcss-cssnext')({
-                    features: {
-                      autoprefixer: { browsers: ['> 5%'] }
-                    }
-                  })
-                ]
-              }
-            }
-          ]
-        })
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({
+      //     fallback: 'style-loader',
+      //     use: [
+      //       {
+      //         loader: 'css-loader',
+      //         options: {
+      //           sourceMap: true,
+      //           modules: true,
+      //           importLoaders: 1,
+      //           localIdentName: '[path]_[name]_[local]_[hash:base64:5]'
+      //         }
+      //       },
+      //       {
+      //         loader: 'postcss-loader',
+      //         options: {
+      //           map: 'inline',
+      //           plugins: () => [
+      //             require('postcss-import')({ addDependencyTo: webpack }),
+      //             require('postcss-url')(),
+      //             require('postcss-cssnext')({
+      //               features: {
+      //                 autoprefixer: { browsers: ['> 5%'] }
+      //               }
+      //             })
+      //           ]
+      //         }
+      //       }
+      //     ]
+      //   })
+      // },
       {
         test: /\.jpg|\.png|\.woff|\.woff2|\.svg|.eot|\.ttf/,
         loader: 'url-loader?limit=8192'
@@ -88,15 +88,15 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'commons',
-      filename: 'js/commons.[hash:5].js'
-    }),
-    new ExtractTextPlugin({
-      filename: 'css/[name].[hash:5].css',
-      disable: false,
-      allChunks: true
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'commons',
+    //   filename: 'js/commons.[hash:5].js'
+    // }),
+    // new ExtractTextPlugin({
+    //   filename: 'css/[name].[hash:5].css',
+    //   disable: false,
+    //   allChunks: true
+    // }),
     IndexPage
   ]
 };

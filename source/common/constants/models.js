@@ -18,3 +18,6 @@ export const GithubState = Immutable.fromJS({
   userId: '',
   data: {}
 });
+export const CounterState = Immutable.Record({
+  count: 0,
+});
