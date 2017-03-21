@@ -27,7 +27,7 @@ module.exports = {
     ]
   },
   entry: {
-    index: path.resolve(SRC_PATH, 'index.js')
+    index: path.resolve(SRC_PATH, 'client/index.js')
   },
   output: {
     path: BUILD_PATH,
@@ -87,6 +87,7 @@ module.exports = {
     port: 8008
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
       filename: 'js/commons.[hash:5].js'
