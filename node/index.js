@@ -1,1 +1,3 @@
-console.log('reHello');
+const server = require('./server.js');
+
+server.start();
