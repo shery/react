@@ -18,9 +18,9 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
-  Route,
-  Switch,
-  Link
+  Route
+  // Switch,
+  // Link
 } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
