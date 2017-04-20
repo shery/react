@@ -49,15 +49,15 @@ class Info extends Component {
     this.setState({ login: e.target.value });
   }
   getInfo() {
-    // fetch('https://api.github.com/users/shery15').then((response) => {
-    //   const info = response.json();
-    //   this.setState({
-    //     username: info.name,
-    //     githubUrl: info.html_url,
-    //     avatarUrl: info.avatar_url
-    //   });
-    // }).then(data => console.log(data))
-    //   .catch(e => console.log('Oops, error', e));
+    fetch('https://api.github.com/users/shery15').then((response) => {
+      const info = response.json();
+      this.setState({
+        username: info.name,
+        githubUrl: info.html_url,
+        avatarUrl: info.avatar_url
+      });
+    }).then(data => console.log(data))
+      .catch(e => console.log('Oops, error', e));
     $.get('https://api.github.com/users/' + this.state.login, (result) => {
       this.setState({
         username: result.name,
