@@ -18,13 +18,13 @@ const GithubBox = props => (
       <CardText>
         Following : {props.data.get('following')}
       </CardText>
-      {/* <CardActions>
+      <CardActions>
         <RaisedButton
           label="Back"
           icon={<ActionHome />}
           secondary
         />
-      </CardActions> */}
+      </CardActions>
     </Card>
   </div>
 );
