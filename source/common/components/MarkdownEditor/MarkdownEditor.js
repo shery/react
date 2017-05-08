@@ -9,7 +9,7 @@ class MarkdownEditor extends Component {
       value: 'Type some *markdown* here!'
     };
   }
-  handleChange() {
+  handleChange(e) {
     this.setState({ value: this.textarea.value });
   }
   rawMarkup() {
