@@ -27,7 +27,7 @@ module.exports = {
     ]
   },
   entry: {
-    index: path.resolve(SRC_PATH, 'client/index.js')
+    index: path.resolve(SRC_PATH, 'index.js')
   },
   output: {
     path: BUILD_PATH,

@@ -25,9 +25,9 @@ import {
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Main from './common/components/Main';
-import HomePageContainer from './containers/HomePageContainer';
-import ResultPageContainer from './containers/ResultPageContainer';
-import store from './store';
+// import HomePageContainer from './containers/HomePageContainer';
+// import ResultPageContainer from './containers/ResultPageContainer';
+import store from './common/store';
 
 injectTapEventPlugin();
 
