@@ -9,7 +9,7 @@ import {
 
 export default connect(
   (state) => ({
-    count: state.get('counterReducers').get('count'),
+    // count: state.get('counterReducers').get('count'),
   }),
   (dispatch) => ({
     onIncrement: () => (

@@ -24,7 +24,7 @@ import {
 } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Main from './components/Main';
+import Main from './common/components/Main';
 import HomePageContainer from './containers/HomePageContainer';
 import ResultPageContainer from './containers/ResultPageContainer';
 import store from './store';
@@ -37,8 +37,8 @@ render(
       <Router>
         <div>
           <Main />
-          <Route component={HomePageContainer} />
-          <ResultPageContainer />
+          {/* <Route component={HomePageContainer} /> */}
+          {/* <ResultPageContainer /> */}
         </div>
       </Router>
     </MuiThemeProvider>
