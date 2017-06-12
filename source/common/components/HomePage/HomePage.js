@@ -16,12 +16,12 @@ const HomePage = ({
       />
 
       <RaisedButton label="Submit" onClick={onSubmitUserId(userId)} primary />
-      {/* <Link
+      <Link
         to={{
           pathname: '/result',
           query: { userId }
         }}
-      /> */}
+      />
     </div>
   );
   // return (
