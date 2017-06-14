@@ -31,10 +31,5 @@ const HomePage = ({
   // );
 };
 
-HomePage.propTypes = {
-  onSubmitUserId: React.PropTypes.func,
-  onChangeUserId: React.PropTypes.func,
-  userId: React.PropTypes.string
-};
 
 export default HomePage;
